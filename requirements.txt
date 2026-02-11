@@ -1,0 +1,10 @@
+google-genai
+googlemaps
+requests
+python-dotenv
+reachy-mini
+mcp
+numpy
+sounddevice
+
+fastmcp
