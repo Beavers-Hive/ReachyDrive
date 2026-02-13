@@ -384,37 +384,69 @@ class GeminiLiveClient:
             self._is_periodic_active = False
             logger.info("Periodic image analysis finished: resuming audio input.")
 
+    async def _look_around(self, mcp_session):
+        """
+        Look around in all directions: left → right → up → down → forward.
+        """
+        if not mcp_session:
+            logger.warning("MCP Session not active for look around")
+            return
+        
+        logger.info("Looking around...")
+        movements = [
+            {"yaw": 90, "duration": 1.5},    # Left
+            {"yaw": -90, "duration": 1.5},    # Right
+            {"pitch": 20, "duration": 1.0},   # Up
+            {"pitch": -20, "duration": 1.0},  # Down
+            {"yaw": 0, "pitch": 0, "duration": 1.5},  # Forward (reset)
+        ]
+        for move in movements:
+            await self.mcp_wrapper.handle_tool_call(mcp_session, "moveHead", move)
+            await asyncio.sleep(2.0)
+        logger.info("Look around complete.")
+
     async def _periodic_tasks(self, session, mcp_session):
         """
         Runs periodic tasks:
-        - Every 30s: Environment/scenery check (front camera) → speak via VOICEVOX
+        - Startup: Look around (left, right, up, down, forward)
+        - Every 120s: Environment check (look around + front camera) → speak via VOICEVOX
         - Every 60s: Driver check (head rotation + driver camera) → speak via VOICEVOX
-        Camera tool calls (checkCamera/checkDriver) are also available for the model
-        to call on its own during conversation.
         """
-        print("Starting Periodic Tasks (30s/60s)...")
+        print("Starting Periodic Tasks (env: 2min / driver: 1min)...")
+        
+        # Startup: Look around to survey the environment
+        logger.info("Startup: Looking around to survey environment...")
+        await self._look_around(mcp_session)
+        
+        # Startup greeting via VOICEVOX
+        logger.info("Startup greeting...")
+        await self._synthesize_and_queue("リーチー、起動しました！ドライブ楽しみですね。どんなところに行きたいですか？")
+        
         start_time = asyncio.get_running_loop().time()
-        
         last_env_check = start_time
-        last_driver_check = start_time + 15  # Offset to avoid collision
+        last_driver_check = start_time + 30  # Offset to avoid collision
         
-        INTERVAL_ENV = 30
-        INTERVAL_DRIVER = 60
+        INTERVAL_ENV = 120     # 2 minutes
+        INTERVAL_DRIVER = 60   # 1 minute
         
         try:
             while True:
                 await asyncio.sleep(1.0)
                 current_time = asyncio.get_running_loop().time()
                 
-                # Environment Check (every 30s): Front camera scenery
+                # Environment Check (every 2min): Look around + front camera scenery
                 if current_time - last_env_check >= INTERVAL_ENV:
                     logger.info("Periodic: Environment Check")
                     last_env_check = current_time
                     
+                    # Look around first
+                    await self._look_around(mcp_session)
+                    
+                    # Then capture front view and analyze
                     frame = self.reachy_io.get_latest_frame()
                     await self._speak_image_analysis(
                         frame,
-                        "あなたは運転席のアシスタントロボットです。この画像は車の前方カメラの映像です。見えるものについて、自然な話し言葉で2〜3文で話しかけてください。マークダウンは使わないでください。"
+                        "あなたは運転席のアシスタントロボットです。この画像は車の前方カメラの映像です。「承知しました」「はい」などの前置きは絶対に言わないでください。最初の一文目から、見える景色について面白い発見や気づいたことを自然な話し言葉で2〜3文で話してください。例えば「あ、あそこに〜が見えますね！」のような感じです。マークダウンは使わないでください。"
                     )
                 
                 # Driver Check (every 60s): Head rotation + driver camera

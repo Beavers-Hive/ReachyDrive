@@ -5,9 +5,10 @@ import os
 import asyncio
 
 class VoicevoxClient:
-    def __init__(self, base_url: str = "http://localhost:50021", speaker_id: int = 1):
+    def __init__(self, base_url: str = "http://localhost:50021", speaker_id: int = 1, speed_scale: float = 1.2):
         self.base_url = base_url
         self.speaker_id = speaker_id
+        self.speed_scale = speed_scale
 
     def generate_audio(self, text: str) -> bytes:
         # Keeping existing sync method for potential compatibility
@@ -18,6 +19,7 @@ class VoicevoxClient:
             query_response = requests.post(f"{self.base_url}/audio_query", params=query_payload)
             query_response.raise_for_status()
             query_data = query_response.json()
+            query_data["speedScale"] = self.speed_scale
             synthesis_payload = {"speaker": self.speaker_id}
             synthesis_response = requests.post(
                 f"{self.base_url}/synthesis",
@@ -44,6 +46,9 @@ class VoicevoxClient:
                 async with session.post(f"{self.base_url}/audio_query", params=query_params) as resp:
                     resp.raise_for_status()
                     query_data = await resp.json()
+
+                # Adjust speed
+                query_data["speedScale"] = self.speed_scale
 
                 # 2. Synthesis
                 synthesis_params = {"speaker": self.speaker_id}

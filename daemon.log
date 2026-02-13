@@ -1,11 +1,11 @@
-2026-02-12 03:40:42,486 - reachy_mini.daemon.daemon - INFO - Daemon version: 1.3.0
-2026-02-12 03:40:42,536 - uvicorn.error - INFO - Started server process [97879]
-2026-02-12 03:40:42,536 - uvicorn.error - INFO - Waiting for application startup.
-2026-02-12 03:40:42,536 - root - INFO - Dataset updater started (interval: 24.0h)
-2026-02-12 03:40:42,536 - reachy_mini.daemon.daemon - INFO - Daemon start parameters: sim=False, mockup_sim=False, serialport=auto, scene=empty, localhost_only=True, wake_up_on_start=True, check_collision=False, kinematics_engine=AnalyticalKinematics, headless=False, hardware_config_filepath=/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/site-packages/reachy_mini/assets/config/hardware_config.yaml
-2026-02-12 03:40:42,536 - reachy_mini.daemon.daemon - INFO - Starting Reachy Mini daemon...
-2026-02-12 03:40:42,537 - reachy_mini.daemon.daemon - INFO - Found Reachy Mini serial port: /dev/cu.usbmodem5B420756051
-2026-02-12 03:40:42,537 - reachy_mini.daemon.daemon - INFO - Creating RobotBackend with parameters: serialport=/dev/cu.usbmodem5B420756051, check_collision=False, kinematics_engine=AnalyticalKinematics
+2026-02-12 12:20:16,362 - reachy_mini.daemon.daemon - INFO - Daemon version: 1.3.0
+2026-02-12 12:20:16,410 - uvicorn.error - INFO - Started server process [2978]
+2026-02-12 12:20:16,410 - uvicorn.error - INFO - Waiting for application startup.
+2026-02-12 12:20:16,411 - root - INFO - Dataset updater started (interval: 24.0h)
+2026-02-12 12:20:16,411 - reachy_mini.daemon.daemon - INFO - Daemon start parameters: sim=False, mockup_sim=False, serialport=auto, scene=empty, localhost_only=True, wake_up_on_start=True, check_collision=False, kinematics_engine=AnalyticalKinematics, headless=False, hardware_config_filepath=/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/site-packages/reachy_mini/assets/config/hardware_config.yaml
+2026-02-12 12:20:16,411 - reachy_mini.daemon.daemon - INFO - Starting Reachy Mini daemon...
+2026-02-12 12:20:16,411 - reachy_mini.daemon.daemon - INFO - Found Reachy Mini serial port: /dev/cu.usbmodem5B420756051
+2026-02-12 12:20:16,411 - reachy_mini.daemon.daemon - INFO - Creating RobotBackend with parameters: serialport=/dev/cu.usbmodem5B420756051, check_collision=False, kinematics_engine=AnalyticalKinematics
 Looking for motor with ID 10 on port /dev/cu.usbmodem5B420756051...[OK]
 Disabling torque for motor with ID 10...[OK]
 Changing offset for motor with ID 10 to 0...[OK]
@@ -132,55 +132,77 @@ Changing offset for motor with ID 18 to 0...[OK]
 Changing angle limits for motor with ID 18 to [0, 4095]...[OK]
 Changing shutdown error for motor with ID 18 to 52...[OK]
 Changing return delay time for motor with ID 18 to 0...[OK]
-Changing operating mode for motor with ID 18 to 3...2026-02-12 03:40:48,128 - reachy_mini.daemon.backend.abstract - INFO - Using AnalyticalKinematics kinematics engine
-2026-02-12 03:40:48,141 - reachy_mini.media.media_manager - INFO - Using default media backend (SoundDevice only).
-2026-02-12 03:40:48,141 - reachy_mini.media.media_manager - INFO - Using SoundDevice audio backend.
-2026-02-12 03:40:48,260 - reachy_mini_motor_controller.control_loop - INFO - Waiting for voltage to be stable at 5V...
-2026-02-12 03:40:48,262 - reachy_mini_motor_controller.control_loop - INFO - Voltage is stable at ~5V: [75, 76, 75, 76, 76, 76, 75, 76, 75] (took 0ns)
-2026-02-12 03:40:48,271 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'body_rotation' (ID: 10): P=200, I=0, D=0
-2026-02-12 03:40:48,271 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_1' (ID: 11): P=300, I=0, D=0
-2026-02-12 03:40:48,271 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_2' (ID: 12): P=300, I=0, D=0
-2026-02-12 03:40:48,271 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_3' (ID: 13): P=300, I=0, D=0
-2026-02-12 03:40:48,271 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_4' (ID: 14): P=300, I=0, D=0
-2026-02-12 03:40:48,271 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_5' (ID: 15): P=300, I=0, D=0
-2026-02-12 03:40:48,271 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_6' (ID: 16): P=300, I=0, D=0
-2026-02-12 03:40:48,271 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'right_antenna' (ID: 17): P=200, I=0, D=0
-2026-02-12 03:40:48,271 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'left_antenna' (ID: 18): P=200, I=0, D=0
-2026-02-12 03:40:48,271 - reachy_mini.daemon.backend.robot.backend - INFO - Motor control mode: MotorControlMode.Disabled
-2026-02-12 03:40:48,791 - reachy_mini.daemon.daemon - INFO - Waking up Reachy Mini...
-2026-02-12 03:40:50,600 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream opened.
-2026-02-12 03:40:51,773 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream closed.
-2026-02-12 03:40:51,774 - reachy_mini.daemon.daemon - INFO - Daemon started successfully.
-2026-02-12 03:40:51,774 - uvicorn.error - INFO - Application startup complete.
-2026-02-12 03:40:51,775 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-2026-02-12 03:42:00,694 - uvicorn.access - INFO - 127.0.0.1:57803 - "POST /api/move/goto HTTP/1.1" 200
-2026-02-12 03:42:00,712 - uvicorn.access - INFO - 127.0.0.1:57805 - "GET /api/state/full HTTP/1.1" 200
-2026-02-12 03:42:06,412 - uvicorn.access - INFO - 127.0.0.1:57813 - "POST /api/move/goto HTTP/1.1" 200
-2026-02-12 03:42:06,435 - uvicorn.access - INFO - 127.0.0.1:57815 - "GET /api/state/full HTTP/1.1" 200
-2026-02-12 03:42:06,458 - uvicorn.access - INFO - 127.0.0.1:57817 - "POST /api/move/goto HTTP/1.1" 200
-2026-02-12 03:42:06,478 - uvicorn.access - INFO - 127.0.0.1:57819 - "GET /api/state/full HTTP/1.1" 200
-2026-02-12 03:42:13,160 - uvicorn.access - INFO - 127.0.0.1:57826 - "POST /api/move/goto HTTP/1.1" 200
-2026-02-12 03:42:13,180 - uvicorn.access - INFO - 127.0.0.1:57828 - "GET /api/state/full HTTP/1.1" 200
-2026-02-12 03:42:15,720 - uvicorn.access - INFO - 127.0.0.1:57833 - "POST /api/move/goto HTTP/1.1" 200
-2026-02-12 03:42:15,742 - uvicorn.access - INFO - 127.0.0.1:57835 - "GET /api/state/full HTTP/1.1" 200
-2026-02-12 03:42:54,230 - uvicorn.error - INFO - Shutting down
-2026-02-12 03:42:54,332 - uvicorn.error - INFO - Waiting for application shutdown.
-2026-02-12 03:42:54,332 - root - INFO - Dataset updater task cancelled
-2026-02-12 03:42:54,332 - root - INFO - Shutting down app manager...
-2026-02-12 03:42:54,332 - root - INFO - Shutting down daemon...
-2026-02-12 03:42:54,332 - reachy_mini.daemon.daemon - INFO - Stopping Reachy Mini daemon...
-2026-02-12 03:42:54,332 - reachy_mini.daemon.daemon - INFO - Putting Reachy Mini to sleep...
-2026-02-12 03:42:54,368 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream opened.
-2026-02-12 03:42:58,510 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream closed.
-2026-02-12 03:42:58,537 - reachy_mini.daemon.daemon - INFO - Daemon stopped successfully.
-2026-02-12 03:42:58,538 - uvicorn.error - INFO - Application shutdown complete.
-2026-02-12 03:42:58,538 - uvicorn.error - INFO - Finished server process [97879]
-[OK]
-Checking configuration...
-Found motor with ID 18 [OK].
-Return delay time is correct: 0 [OK].
-Operating mode is correct: 3 [OK].
-Angle limits are correct: [0, 4095] [OK].
-Homing offset is correct: 0 [OK].
-Shutdown error is correct: 52 [OK].
-Configuration is correct [OK]!
+Changing operating mode for motor with ID 18 to 3...2026-02-12 12:20:21,997 - reachy_mini.daemon.backend.abstract - INFO - Using AnalyticalKinematics kinematics engine
+2026-02-12 12:20:22,018 - reachy_mini.media.media_manager - INFO - Using default media backend (SoundDevice only).
+2026-02-12 12:20:22,018 - reachy_mini.media.media_manager - INFO - Using SoundDevice audio backend.
+2026-02-12 12:20:22,145 - reachy_mini_motor_controller.control_loop - INFO - Waiting for voltage to be stable at 5V...
+2026-02-12 12:20:22,147 - reachy_mini_motor_controller.control_loop - INFO - Voltage is stable at ~5V: [75, 76, 75, 76, 75, 75, 75, 75, 75] (took 0ns)
+2026-02-12 12:20:22,156 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'body_rotation' (ID: 10): P=200, I=0, D=0
+2026-02-12 12:20:22,156 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_1' (ID: 11): P=300, I=0, D=0
+2026-02-12 12:20:22,156 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_2' (ID: 12): P=300, I=0, D=0
+2026-02-12 12:20:22,156 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_3' (ID: 13): P=300, I=0, D=0
+2026-02-12 12:20:22,156 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_4' (ID: 14): P=300, I=0, D=0
+2026-02-12 12:20:22,156 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_5' (ID: 15): P=300, I=0, D=0
+2026-02-12 12:20:22,156 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_6' (ID: 16): P=300, I=0, D=0
+2026-02-12 12:20:22,156 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'right_antenna' (ID: 17): P=200, I=0, D=0
+2026-02-12 12:20:22,156 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'left_antenna' (ID: 18): P=200, I=0, D=0
+2026-02-12 12:20:22,156 - reachy_mini.daemon.backend.robot.backend - INFO - Motor control mode: MotorControlMode.Disabled
+2026-02-12 12:20:22,693 - reachy_mini.daemon.daemon - INFO - Waking up Reachy Mini...
+2026-02-12 12:20:24,533 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream opened.
+2026-02-12 12:20:25,675 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream closed.
+2026-02-12 12:20:25,675 - reachy_mini.daemon.daemon - INFO - Daemon started successfully.
+2026-02-12 12:20:25,675 - uvicorn.error - INFO - Application startup complete.
+2026-02-12 12:20:25,676 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-02-12 12:20:31,714 - uvicorn.access - INFO - 127.0.0.1:50518 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:20:31,731 - uvicorn.access - INFO - 127.0.0.1:50520 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:20:33,768 - uvicorn.access - INFO - 127.0.0.1:50524 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:20:33,789 - uvicorn.access - INFO - 127.0.0.1:50526 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:20:35,832 - uvicorn.access - INFO - 127.0.0.1:50528 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:20:35,854 - uvicorn.access - INFO - 127.0.0.1:50530 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:20:37,892 - uvicorn.access - INFO - 127.0.0.1:50535 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:20:37,912 - uvicorn.access - INFO - 127.0.0.1:50537 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:20:39,936 - uvicorn.access - INFO - 127.0.0.1:50541 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:20:39,958 - uvicorn.access - INFO - 127.0.0.1:50543 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:20:54,894 - uvicorn.access - INFO - 127.0.0.1:50563 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:20:54,914 - uvicorn.access - INFO - 127.0.0.1:50565 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:20:55,260 - uvicorn.access - INFO - 127.0.0.1:50567 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:20:56,082 - uvicorn.access - INFO - 127.0.0.1:50569 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:20:56,612 - uvicorn.access - INFO - 127.0.0.1:50571 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:20:57,140 - uvicorn.access - INFO - 127.0.0.1:50573 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:20:57,165 - uvicorn.access - INFO - 127.0.0.1:50575 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:21:13,513 - uvicorn.access - INFO - 127.0.0.1:50587 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:21:13,533 - uvicorn.access - INFO - 127.0.0.1:50589 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:21:14,142 - uvicorn.access - INFO - 127.0.0.1:50591 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:21:14,161 - uvicorn.access - INFO - 127.0.0.1:50593 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:21:31,891 - uvicorn.access - INFO - 127.0.0.1:50607 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:21:31,915 - uvicorn.access - INFO - 127.0.0.1:50609 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:21:32,130 - uvicorn.access - INFO - 127.0.0.1:50612 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:21:32,155 - uvicorn.access - INFO - 127.0.0.1:50614 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:21:55,347 - uvicorn.access - INFO - 127.0.0.1:50645 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:21:55,368 - uvicorn.access - INFO - 127.0.0.1:50647 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:21:55,565 - uvicorn.access - INFO - 127.0.0.1:50649 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:21:55,585 - uvicorn.access - INFO - 127.0.0.1:50651 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:21:58,694 - uvicorn.access - INFO - 127.0.0.1:50654 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:21:58,714 - uvicorn.access - INFO - 127.0.0.1:50656 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:22:13,885 - uvicorn.access - INFO - 127.0.0.1:50674 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:22:13,955 - uvicorn.access - INFO - 127.0.0.1:50676 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:22:16,482 - uvicorn.access - INFO - 127.0.0.1:50680 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:22:16,500 - uvicorn.access - INFO - 127.0.0.1:50682 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:22:43,460 - uvicorn.access - INFO - 127.0.0.1:50703 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:22:43,480 - uvicorn.access - INFO - 127.0.0.1:50705 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:22:45,516 - uvicorn.access - INFO - 127.0.0.1:50712 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:22:45,537 - uvicorn.access - INFO - 127.0.0.1:50714 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:22:47,570 - uvicorn.access - INFO - 127.0.0.1:50717 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:22:47,590 - uvicorn.access - INFO - 127.0.0.1:50719 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:22:47,678 - uvicorn.access - INFO - 127.0.0.1:50721 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:22:47,696 - uvicorn.access - INFO - 127.0.0.1:50723 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:22:49,615 - uvicorn.access - INFO - 127.0.0.1:50737 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:22:49,632 - uvicorn.access - INFO - 127.0.0.1:50739 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:22:51,127 - uvicorn.access - INFO - 127.0.0.1:50742 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:22:51,147 - uvicorn.access - INFO - 127.0.0.1:50744 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:22:51,657 - uvicorn.access - INFO - 127.0.0.1:50746 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:22:51,676 - uvicorn.access - INFO - 127.0.0.1:50748 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:23:13,950 - uvicorn.access - INFO - 127.0.0.1:50768 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:23:13,977 - uvicorn.access - INFO - 127.0.0.1:50770 - "GET /api/state/full HTTP/1.1" 200
+2026-02-12 12:23:16,525 - uvicorn.access - INFO - 127.0.0.1:50772 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-12 12:23:16,544 - uvicorn.access - INFO - 127.0.0.1:50774 - "GET /api/state/full HTTP/1.1" 200
