@@ -10,7 +10,7 @@ class GoogleMapsClient:
             raise ValueError("GOOGLEMAP_API_KEY not found in environment variables")
         self.client = googlemaps.Client(key=self.api_key)
 
-    def search_places(self, query: str, location: str = None) -> str:
+    def search_places(self, query: str, location: str = None) -> tuple[str, list]:
         """
         Search for places based on a query.
         Returns a formatted string with place recommendations.
@@ -20,22 +20,30 @@ class GoogleMapsClient:
             places_result = self.client.places(query=query)
             
             if not places_result.get('results'):
-                return "すみません、その場所は見つかりませんでした。"
+                return "すみません、その場所は見つかりませんでした。", []
 
             results = places_result['results'][:3] # Top 3
             response = "以下の場所が見つかりました：\n"
             
+            structured_results = []
             for place in results:
                 name = place.get('name')
                 address = place.get('formatted_address')
                 rating = place.get('rating', 'N/A')
                 response += f"- {name} (評価: {rating}) - {address}\n"
+                structured_results.append({
+                    "name": name,
+                    "address": address,
+                    "rating": rating,
+                    "place_id": place.get('place_id'),
+                    "geometry": place.get('geometry')
+                })
             
-            return response
+            return response, structured_results
 
         except Exception as e:
             print(f"Google Maps API Error: {e}")
-            return "Google Maps API Error: Google Mapsでの検索中にエラーが発生しました。"
+            return "Google Maps API Error: Google Mapsでの検索中にエラーが発生しました。", []
 
 def get_tool_declaration() -> Tool:
     return Tool(function_declarations=[

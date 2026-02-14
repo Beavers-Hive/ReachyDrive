@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+build/
+app/.dart_tool/
+app/.packages
+app/.pub-cache/
+app/.pub/
+app/build/

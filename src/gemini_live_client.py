@@ -13,6 +13,7 @@ from .voicevox_client import VoicevoxClient
 from PIL import Image
 import io
 import re # Added for sentence splitting
+from .websocket_client import ReachyWebSocketClient
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -30,9 +31,16 @@ class GeminiLiveClient:
         self.mcp_wrapper = mcp_wrapper
         self.maps_client = maps_client
         self.voicevox_client = voicevox_client
+        self.voicevox_client = voicevox_client
         self.reachy_io = reachy_io
         
+        # WebSocket Client
+        self.ws_uri = os.getenv("WEBSOCKET_URL", "ws://localhost:8080/ws")
+        self.ws_client = ReachyWebSocketClient(self.ws_uri)
+        self.ws_started = False
+        
         self._is_periodic_active = False # Flag to pause audio input
+        self._startup_done = False # Flag to prevent re-greeting on reconnect
         
         # Audio output queue for Voicevox
         self._audio_queue = asyncio.Queue()
@@ -101,6 +109,11 @@ class GeminiLiveClient:
             try:
                 async with self.client.aio.live.connect(model=session_model_id, config=config) as session:
                     logger.info(f"Connected to Gemini Live API with model: {session_model_id} (attempt {retry_count + 1})")
+                    
+                    # Start WebSocket Client in background if not already started
+                    if not self.ws_started:
+                        self.ws_client.start_in_background(asyncio.get_running_loop())
+                        self.ws_started = True
                     
                     # Reset retry count on successful connection
                     retry_count = 0
@@ -196,8 +209,8 @@ class GeminiLiveClient:
         """
         self._text_buffer += text
         
-        # Split by sentence delimiters: 。 ！ ？ \n
-        sentences = re.split(r'([。！？\n])', self._text_buffer)
+        # Split by sentence delimiters: 。！？!?  \n
+        sentences = re.split(r'([。！？!?\n])', self._text_buffer)
         
         # If we have at least one complete sentence
         if len(sentences) > 1:
@@ -234,9 +247,12 @@ class GeminiLiveClient:
             # But search_places and voicevox outputs are standard wav.
             # ReachyIO.play_stream_chunk expects PCM 16bit 24kHz.
             # Voicevox default is often 24kHz or 48kHz.
-            # Let's check voicevox_client output. It's usually 24000Hz WAV pcm_s16le.
+            # Let's check voicevox_client            # Voicevox default is often 24kHz or 48kHz.
             # ReachyIO.play_stream_chunk needs to be robust.
             await self._audio_queue.put(audio_data)
+            
+            # Send to WebSocket
+            await self.ws_client.send_text_event(text, speaker="robot")
 
     async def _audio_output_worker(self):
         """
@@ -277,10 +293,17 @@ class GeminiLiveClient:
             
             # Google Maps
             if name == "searchPlaces":
-                result = self.maps_client.search_places(
+                result, places = self.maps_client.search_places(
                     query=args.get("query"),
                     location=args.get("location")
                 )
+                # Send locations to WebSocket
+                if places:
+                    for place in places:
+                        await self.ws_client.send_location_event(
+                            name=place.get("name"),
+                            address=place.get("address")
+                        )
             
             # Camera Tools
             elif name == "checkCamera":
@@ -414,13 +437,16 @@ class GeminiLiveClient:
         """
         print("Starting Periodic Tasks (env: 2min / driver: 1min)...")
         
-        # Startup: Look around to survey the environment
-        logger.info("Startup: Looking around to survey environment...")
-        await self._look_around(mcp_session)
-        
-        # Startup greeting via VOICEVOX
-        logger.info("Startup greeting...")
-        await self._synthesize_and_queue("リーチー、起動しました！ドライブ楽しみですね。どんなところに行きたいですか？")
+        # Startup: Look around and greet (only on first launch)
+        if not self._startup_done:
+            logger.info("Startup: Looking around to survey environment...")
+            await self._look_around(mcp_session)
+            
+            logger.info("Startup greeting...")
+            await self._synthesize_and_queue("リーチーミニ、起動しました！お話ししましょう！")
+            self._startup_done = True
+        else:
+            logger.info("Reconnected. Skipping startup greeting.")
         
         start_time = asyncio.get_running_loop().time()
         last_env_check = start_time
@@ -433,6 +459,10 @@ class GeminiLiveClient:
             while True:
                 await asyncio.sleep(1.0)
                 current_time = asyncio.get_running_loop().time()
+                
+                # Skip checks while speaking (audio queue has items)
+                if not self._audio_queue.empty() or self._is_periodic_active:
+                    continue
                 
                 # Environment Check (every 2min): Look around + front camera scenery
                 if current_time - last_env_check >= INTERVAL_ENV:
