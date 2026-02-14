@@ -1,0 +1,3 @@
+[submodule "reachy-mini-mcp"]
+	path = reachy-mini-mcp
+	url = https://github.com/OriNachum/reachy-mini-mcp.git
