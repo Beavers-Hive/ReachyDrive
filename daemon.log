@@ -1,11 +1,11 @@
-2026-02-13 16:16:16,812 - reachy_mini.daemon.daemon - INFO - Daemon version: 1.3.0
-2026-02-13 16:16:16,856 - uvicorn.error - INFO - Started server process [28555]
-2026-02-13 16:16:16,857 - uvicorn.error - INFO - Waiting for application startup.
-2026-02-13 16:16:16,857 - root - INFO - Dataset updater started (interval: 24.0h)
-2026-02-13 16:16:16,857 - reachy_mini.daemon.daemon - INFO - Daemon start parameters: sim=False, mockup_sim=False, serialport=auto, scene=empty, localhost_only=True, wake_up_on_start=True, check_collision=False, kinematics_engine=AnalyticalKinematics, headless=False, hardware_config_filepath=/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/site-packages/reachy_mini/assets/config/hardware_config.yaml
-2026-02-13 16:16:16,857 - reachy_mini.daemon.daemon - INFO - Starting Reachy Mini daemon...
-2026-02-13 16:16:16,857 - reachy_mini.daemon.daemon - INFO - Found Reachy Mini serial port: /dev/cu.usbmodem5B420756051
-2026-02-13 16:16:16,857 - reachy_mini.daemon.daemon - INFO - Creating RobotBackend with parameters: serialport=/dev/cu.usbmodem5B420756051, check_collision=False, kinematics_engine=AnalyticalKinematics
+2026-02-14 17:34:27,676 - reachy_mini.daemon.daemon - INFO - Daemon version: 1.3.0
+2026-02-14 17:34:27,729 - uvicorn.error - INFO - Started server process [45115]
+2026-02-14 17:34:27,729 - uvicorn.error - INFO - Waiting for application startup.
+2026-02-14 17:34:27,729 - root - INFO - Dataset updater started (interval: 24.0h)
+2026-02-14 17:34:27,729 - reachy_mini.daemon.daemon - INFO - Daemon start parameters: sim=False, mockup_sim=False, serialport=auto, scene=empty, localhost_only=True, wake_up_on_start=True, check_collision=False, kinematics_engine=AnalyticalKinematics, headless=False, hardware_config_filepath=/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/site-packages/reachy_mini/assets/config/hardware_config.yaml
+2026-02-14 17:34:27,729 - reachy_mini.daemon.daemon - INFO - Starting Reachy Mini daemon...
+2026-02-14 17:34:27,730 - reachy_mini.daemon.daemon - INFO - Found Reachy Mini serial port: /dev/cu.usbmodem5B420756051
+2026-02-14 17:34:27,730 - reachy_mini.daemon.daemon - INFO - Creating RobotBackend with parameters: serialport=/dev/cu.usbmodem5B420756051, check_collision=False, kinematics_engine=AnalyticalKinematics
 Looking for motor with ID 10 on port /dev/cu.usbmodem5B420756051...[OK]
 Disabling torque for motor with ID 10...[OK]
 Changing offset for motor with ID 10 to 0...[OK]
@@ -132,41 +132,473 @@ Changing offset for motor with ID 18 to 0...[OK]
 Changing angle limits for motor with ID 18 to [0, 4095]...[OK]
 Changing shutdown error for motor with ID 18 to 52...[OK]
 Changing return delay time for motor with ID 18 to 0...[OK]
-Changing operating mode for motor with ID 18 to 3...2026-02-13 16:16:22,456 - reachy_mini.daemon.backend.abstract - INFO - Using AnalyticalKinematics kinematics engine
-2026-02-13 16:16:22,463 - reachy_mini.media.media_manager - INFO - Using default media backend (SoundDevice only).
-2026-02-13 16:16:22,463 - reachy_mini.media.media_manager - INFO - Using SoundDevice audio backend.
-2026-02-13 16:16:22,556 - reachy_mini_motor_controller.control_loop - INFO - Waiting for voltage to be stable at 5V...
-2026-02-13 16:16:22,558 - reachy_mini_motor_controller.control_loop - INFO - Voltage is stable at ~5V: [75, 76, 75, 76, 76, 76, 75, 76, 75] (took 0ns)
-2026-02-13 16:16:22,567 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'body_rotation' (ID: 10): P=200, I=0, D=0
-2026-02-13 16:16:22,567 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_1' (ID: 11): P=300, I=0, D=0
-2026-02-13 16:16:22,567 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_2' (ID: 12): P=300, I=0, D=0
-2026-02-13 16:16:22,567 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_3' (ID: 13): P=300, I=0, D=0
-2026-02-13 16:16:22,567 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_4' (ID: 14): P=300, I=0, D=0
-2026-02-13 16:16:22,567 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_5' (ID: 15): P=300, I=0, D=0
-2026-02-13 16:16:22,567 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_6' (ID: 16): P=300, I=0, D=0
-2026-02-13 16:16:22,567 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'right_antenna' (ID: 17): P=200, I=0, D=0
-2026-02-13 16:16:22,567 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'left_antenna' (ID: 18): P=200, I=0, D=0
-2026-02-13 16:16:22,567 - reachy_mini.daemon.backend.robot.backend - INFO - Motor control mode: MotorControlMode.Disabled
-2026-02-13 16:16:23,091 - reachy_mini.daemon.daemon - INFO - Waking up Reachy Mini...
-2026-02-13 16:16:24,967 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream opened.
-2026-02-13 16:16:26,027 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream closed.
-2026-02-13 16:16:26,028 - reachy_mini.daemon.daemon - INFO - Daemon started successfully.
-2026-02-13 16:16:26,028 - uvicorn.error - INFO - Application startup complete.
-2026-02-13 16:16:26,029 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-2026-02-13 16:16:26,533 - uvicorn.access - INFO - 127.0.0.1:51932 - "GET /api/daemon/status HTTP/1.1" 200
-2026-02-13 16:16:30,672 - uvicorn.error - INFO - Shutting down
-2026-02-13 16:16:30,791 - uvicorn.error - INFO - Waiting for application shutdown.
-2026-02-13 16:16:30,810 - root - INFO - Dataset updater task cancelled
-2026-02-13 16:16:30,820 - root - INFO - Shutting down app manager...
-2026-02-13 16:16:30,820 - root - INFO - Shutting down daemon...
-2026-02-13 16:16:30,820 - reachy_mini.daemon.daemon - INFO - Stopping Reachy Mini daemon...
-2026-02-13 16:16:30,820 - reachy_mini.daemon.daemon - INFO - Putting Reachy Mini to sleep...
-2026-02-13 16:16:30,978 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream opened.
-2026-02-13 16:16:35,141 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream closed.
-2026-02-13 16:16:35,172 - reachy_mini.daemon.daemon - INFO - Daemon stopped successfully.
-2026-02-13 16:16:35,173 - uvicorn.error - INFO - Application shutdown complete.
-2026-02-13 16:16:35,173 - uvicorn.error - INFO - Finished server process [28555]
-                                                                                                                                                                                                                                                                       2026-02-13 16:16:16,161 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream closed.
-2026-02-13 16:16:16,196 - reachy_mini.daemon.daemon - INFO - Daemon stopped successfully.
-2026-02-13 16:16:16,196 - uvicorn.error - INFO - Application shutdown complete.
-2026-02-13 16:16:16,196 - uvicorn.error - INFO - Finished server process [28432]
+Changing operating mode for motor with ID 18 to 3...2026-02-14 17:34:33,445 - reachy_mini.daemon.backend.abstract - INFO - Using AnalyticalKinematics kinematics engine
+2026-02-14 17:34:33,473 - reachy_mini.media.media_manager - INFO - Using default media backend (SoundDevice only).
+2026-02-14 17:34:33,473 - reachy_mini.media.media_manager - INFO - Using SoundDevice audio backend.
+2026-02-14 17:34:33,587 - reachy_mini_motor_controller.control_loop - INFO - Waiting for voltage to be stable at 5V...
+2026-02-14 17:34:33,589 - reachy_mini_motor_controller.control_loop - INFO - Voltage is stable at ~5V: [75, 76, 75, 76, 76, 76, 75, 76, 75] (took 0ns)
+2026-02-14 17:34:33,599 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'body_rotation' (ID: 10): P=200, I=0, D=0
+2026-02-14 17:34:33,599 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_1' (ID: 11): P=300, I=0, D=0
+2026-02-14 17:34:33,599 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_2' (ID: 12): P=300, I=0, D=0
+2026-02-14 17:34:33,599 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_3' (ID: 13): P=300, I=0, D=0
+2026-02-14 17:34:33,599 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_4' (ID: 14): P=300, I=0, D=0
+2026-02-14 17:34:33,599 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_5' (ID: 15): P=300, I=0, D=0
+2026-02-14 17:34:33,599 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'stewart_6' (ID: 16): P=300, I=0, D=0
+2026-02-14 17:34:33,599 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'right_antenna' (ID: 17): P=200, I=0, D=0
+2026-02-14 17:34:33,599 - reachy_mini.daemon.backend.robot.backend - INFO - Setting PID gains for motor 'left_antenna' (ID: 18): P=200, I=0, D=0
+2026-02-14 17:34:33,599 - reachy_mini.daemon.backend.robot.backend - INFO - Motor control mode: MotorControlMode.Disabled
+2026-02-14 17:34:34,152 - reachy_mini.daemon.daemon - INFO - Waking up Reachy Mini...
+2026-02-14 17:34:37,851 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream opened.
+2026-02-14 17:34:39,255 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream closed.
+2026-02-14 17:34:39,255 - reachy_mini.daemon.daemon - INFO - Daemon started successfully.
+2026-02-14 17:34:39,256 - uvicorn.error - INFO - Application startup complete.
+2026-02-14 17:34:39,257 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-02-14 17:34:39,482 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:40,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:42,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:43,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:45,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:46,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:46,918 - uvicorn.access - INFO - 127.0.0.1:65070 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:34:46,934 - uvicorn.access - INFO - 127.0.0.1:65072 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:34:48,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:48,955 - uvicorn.access - INFO - 127.0.0.1:65075 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:34:48,971 - uvicorn.access - INFO - 127.0.0.1:65077 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:34:49,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:34:49,463 - uvicorn.access - INFO - 127.0.0.1:65078 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:50,991 - uvicorn.access - INFO - 127.0.0.1:65080 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:34:51,010 - uvicorn.access - INFO - 127.0.0.1:65082 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:34:51,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:52,473 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:53,032 - uvicorn.access - INFO - 127.0.0.1:65091 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:34:53,050 - uvicorn.access - INFO - 127.0.0.1:65093 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:34:54,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:55,090 - uvicorn.access - INFO - 127.0.0.1:65096 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:34:55,115 - uvicorn.access - INFO - 127.0.0.1:65098 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:34:55,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:57,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:34:58,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:00,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:35:00,465 - uvicorn.access - INFO - 127.0.0.1:65107 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:01,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:03,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:04,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:06,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:07,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:07,724 - uvicorn.access - INFO - 127.0.0.1:65119 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:35:07,745 - uvicorn.access - INFO - 127.0.0.1:65121 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:35:08,001 - uvicorn.access - INFO - 127.0.0.1:65123 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:35:08,021 - uvicorn.access - INFO - 127.0.0.1:65125 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:35:09,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:10,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:11,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:35:12,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:13,431 - uvicorn.access - INFO - 127.0.0.1:65137 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:35:13,450 - uvicorn.access - INFO - 127.0.0.1:65139 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:35:13,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:15,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:16,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:17,917 - uvicorn.access - INFO - 127.0.0.1:65154 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:35:17,939 - uvicorn.access - INFO - 127.0.0.1:65157 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:35:18,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:19,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:21,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:22,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:35:22,470 - uvicorn.access - INFO - 127.0.0.1:65163 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:24,430 - uvicorn.access - INFO - 127.0.0.1:65165 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:35:24,450 - uvicorn.access - INFO - 127.0.0.1:65167 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:35:24,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:25,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:27,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:28,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:30,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:31,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:33,459 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:35:33,462 - uvicorn.access - INFO - 127.0.0.1:65181 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:34,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:36,470 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:37,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:39,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:40,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:42,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:43,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:44,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:35:44,632 - uvicorn.access - INFO - 127.0.0.1:65189 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:35:44,655 - uvicorn.access - INFO - 127.0.0.1:65191 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:35:45,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:46,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:48,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:49,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:51,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:52,478 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:54,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:55,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:35:55,469 - uvicorn.access - INFO - 127.0.0.1:65209 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:57,468 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:58,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:35:59,118 - uvicorn.access - INFO - 127.0.0.1:65216 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:35:59,140 - uvicorn.access - INFO - 127.0.0.1:65218 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:36:00,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:01,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:03,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:04,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:06,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:36:06,465 - uvicorn.access - INFO - 127.0.0.1:65237 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:07,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:09,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:10,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:12,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:13,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:15,481 - uvicorn.access - INFO - 127.0.0.1:65245 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:36:15,504 - uvicorn.access - INFO - 127.0.0.1:65247 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:36:15,646 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:16,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:17,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:36:18,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:19,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:21,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:22,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:24,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:25,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:27,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:28,280 - uvicorn.access - INFO - 127.0.0.1:65259 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:36:28,299 - uvicorn.access - INFO - 127.0.0.1:65261 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:36:28,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:36:28,467 - uvicorn.access - INFO - 127.0.0.1:65262 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:29,557 - uvicorn.access - INFO - 127.0.0.1:65266 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:36:29,575 - uvicorn.access - INFO - 127.0.0.1:65268 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:36:29,972 - uvicorn.access - INFO - 127.0.0.1:65271 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:36:29,993 - uvicorn.access - INFO - 127.0.0.1:65273 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:36:30,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:30,846 - uvicorn.access - INFO - 127.0.0.1:65276 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:36:30,861 - uvicorn.access - INFO - 127.0.0.1:65278 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:36:31,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:33,459 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:34,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:36,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:37,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:39,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:36:39,463 - uvicorn.access - INFO - 127.0.0.1:65289 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:40,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:42,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:43,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:45,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:46,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:48,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:49,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:50,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:36:51,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:52,473 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:54,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:55,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:57,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:36:58,246 - uvicorn.access - INFO - 127.0.0.1:65312 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:36:58,277 - uvicorn.access - INFO - 127.0.0.1:65314 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:36:58,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:00,329 - uvicorn.access - INFO - 127.0.0.1:65319 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:00,351 - uvicorn.access - INFO - 127.0.0.1:65321 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:37:00,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:01,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:37:01,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:02,391 - uvicorn.access - INFO - 127.0.0.1:65324 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:02,410 - uvicorn.access - INFO - 127.0.0.1:65326 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:37:03,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:04,436 - uvicorn.access - INFO - 127.0.0.1:65329 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:04,455 - uvicorn.access - INFO - 127.0.0.1:65332 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:37:04,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:06,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:06,486 - uvicorn.access - INFO - 127.0.0.1:65340 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:06,512 - uvicorn.access - INFO - 127.0.0.1:65342 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:37:07,484 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:09,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:09,621 - uvicorn.access - INFO - 127.0.0.1:65349 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:09,641 - uvicorn.access - INFO - 127.0.0.1:65354 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:37:10,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:12,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:37:12,466 - uvicorn.access - INFO - 127.0.0.1:65357 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:13,469 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:15,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:16,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:17,578 - uvicorn.access - INFO - 127.0.0.1:65367 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:17,598 - uvicorn.access - INFO - 127.0.0.1:65369 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:37:18,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:19,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:21,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:22,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:23,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:37:24,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:25,468 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:27,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:28,457 - uvicorn.access - INFO - 127.0.0.1:65378 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:28,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:28,476 - uvicorn.access - INFO - 127.0.0.1:65380 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:37:30,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:31,014 - uvicorn.access - INFO - 127.0.0.1:65385 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:31,038 - uvicorn.access - INFO - 127.0.0.1:65387 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:37:31,306 - uvicorn.access - INFO - 127.0.0.1:65390 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:31,325 - uvicorn.access - INFO - 127.0.0.1:65392 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:37:31,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:33,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:34,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:37:34,462 - uvicorn.access - INFO - 127.0.0.1:65400 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:36,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:37,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:39,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:40,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:42,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:43,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:45,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:37:45,466 - uvicorn.access - INFO - 127.0.0.1:65411 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:46,467 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:47,177 - uvicorn.access - INFO - 127.0.0.1:65413 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:47,200 - uvicorn.access - INFO - 127.0.0.1:65415 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:37:48,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:49,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:51,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:52,439 - uvicorn.access - INFO - 127.0.0.1:65424 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:52,467 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:52,480 - uvicorn.access - INFO - 127.0.0.1:65430 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:37:54,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:55,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:56,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:37:57,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:58,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:37:58,792 - uvicorn.access - INFO - 127.0.0.1:65439 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:37:58,812 - uvicorn.access - INFO - 127.0.0.1:65441 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:38:00,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:01,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:03,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:04,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:06,468 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:07,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:38:07,470 - uvicorn.access - INFO - 127.0.0.1:65459 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:09,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:10,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:12,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:13,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:15,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:16,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:18,472 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:38:18,475 - uvicorn.access - INFO - 127.0.0.1:65470 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:18,789 - uvicorn.access - INFO - 127.0.0.1:65473 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:38:18,815 - uvicorn.access - INFO - 127.0.0.1:65475 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:38:19,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:21,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:22,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:24,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:25,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:27,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:28,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:28,530 - uvicorn.access - INFO - 127.0.0.1:65483 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:38:28,549 - uvicorn.access - INFO - 127.0.0.1:65485 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:38:29,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:38:30,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:31,099 - uvicorn.access - INFO - 127.0.0.1:65490 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:38:31,118 - uvicorn.access - INFO - 127.0.0.1:65492 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:38:31,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:31,633 - uvicorn.access - INFO - 127.0.0.1:65495 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:38:31,653 - uvicorn.access - INFO - 127.0.0.1:65497 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:38:33,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:34,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:36,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:37,469 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:39,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:40,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:38:40,475 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:42,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:43,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:45,470 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:46,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:48,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:49,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:51,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:38:51,464 - uvicorn.access - INFO - 127.0.0.1:65513 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:52,521 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:54,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:55,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:57,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:58,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:38:58,880 - uvicorn.access - INFO - 127.0.0.1:65526 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:38:58,900 - uvicorn.access - INFO - 127.0.0.1:65528 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:38:59,098 - uvicorn.access - INFO - 127.0.0.1:65530 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:38:59,116 - uvicorn.access - INFO - 127.0.0.1:65532 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:39:00,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:01,159 - uvicorn.access - INFO - 127.0.0.1:49156 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:39:01,179 - uvicorn.access - INFO - 127.0.0.1:49158 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:39:01,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:02,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:39:03,216 - uvicorn.access - INFO - 127.0.0.1:49160 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:39:03,236 - uvicorn.access - INFO - 127.0.0.1:49162 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:39:03,307 - uvicorn.access - INFO - 127.0.0.1:49164 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:39:03,324 - uvicorn.access - INFO - 127.0.0.1:49166 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:39:03,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:04,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:05,270 - uvicorn.access - INFO - 127.0.0.1:49172 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:39:05,298 - uvicorn.access - INFO - 127.0.0.1:49174 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:39:06,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:07,327 - uvicorn.access - INFO - 127.0.0.1:49183 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:39:07,349 - uvicorn.access - INFO - 127.0.0.1:49185 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:39:07,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:09,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:10,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:12,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:13,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:39:13,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:15,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:16,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:18,469 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:19,479 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:21,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:22,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:24,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:39:24,470 - uvicorn.access - INFO - 127.0.0.1:49208 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:25,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:27,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:28,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:28,948 - uvicorn.access - INFO - 127.0.0.1:49211 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:39:28,969 - uvicorn.access - INFO - 127.0.0.1:49214 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:39:30,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:31,467 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:31,511 - uvicorn.access - INFO - 127.0.0.1:49217 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:39:31,530 - uvicorn.access - INFO - 127.0.0.1:49219 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:39:33,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:34,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:35,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:39:36,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:37,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:39,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:40,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:40,814 - uvicorn.access - INFO - 127.0.0.1:49229 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:39:40,834 - uvicorn.access - INFO - 127.0.0.1:49231 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:39:42,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:43,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:45,467 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:46,467 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:39:46,470 - uvicorn.access - INFO - 127.0.0.1:49239 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:48,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:49,468 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:51,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:52,488 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:54,467 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:55,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:57,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:39:57,469 - uvicorn.access - INFO - 127.0.0.1:49252 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:39:58,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:00,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:01,670 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:03,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:04,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:06,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:07,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:08,467 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:40:09,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:10,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:12,367 - uvicorn.access - INFO - 127.0.0.1:49269 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:12,397 - uvicorn.access - INFO - 127.0.0.1:49271 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:40:12,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:12,682 - uvicorn.access - INFO - 127.0.0.1:49273 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:13,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:14,709 - uvicorn.access - INFO - 127.0.0.1:49283 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:14,728 - uvicorn.access - INFO - 127.0.0.1:49285 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:40:15,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:16,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:18,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:19,471 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:40:19,474 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:21,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:22,469 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:24,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:25,467 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:27,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:28,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:29,636 - uvicorn.access - INFO - 127.0.0.1:49298 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:29,657 - uvicorn.access - INFO - 127.0.0.1:49300 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:40:30,473 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:40:30,473 - uvicorn.access - INFO - 127.0.0.1:49302 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:31,467 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:32,225 - uvicorn.access - INFO - 127.0.0.1:49304 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:32,247 - uvicorn.access - INFO - 127.0.0.1:49306 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:40:33,467 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:34,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:36,468 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:37,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:39,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:40,469 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:41,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:40:42,468 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:43,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:45,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:46,467 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:48,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:49,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:51,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:52,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:40:52,465 - uvicorn.access - INFO - 127.0.0.1:49324 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:53,836 - uvicorn.access - INFO - 127.0.0.1:49328 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:53,866 - uvicorn.access - INFO - 127.0.0.1:49330 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:40:54,470 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:55,710 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:57,390 - uvicorn.access - INFO - 127.0.0.1:49339 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:57,413 - uvicorn.access - INFO - 127.0.0.1:49341 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:40:57,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:57,788 - uvicorn.access - INFO - 127.0.0.1:49343 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:58,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:40:58,617 - uvicorn.access - INFO - 127.0.0.1:49346 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:59,145 - uvicorn.access - INFO - 127.0.0.1:49350 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:59,187 - uvicorn.access - INFO - 127.0.0.1:49352 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:59,215 - uvicorn.access - INFO - 127.0.0.1:49354 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:40:59,666 - uvicorn.access - INFO - 127.0.0.1:49357 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:40:59,691 - uvicorn.access - INFO - 127.0.0.1:49359 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:41:00,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:01,255 - uvicorn.access - INFO - 127.0.0.1:49365 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:41:01,275 - uvicorn.access - INFO - 127.0.0.1:49367 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:41:01,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:03,317 - uvicorn.access - INFO - 127.0.0.1:49370 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:41:03,337 - uvicorn.access - INFO - 127.0.0.1:49372 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:41:03,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:41:03,463 - uvicorn.access - INFO - 127.0.0.1:49374 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:04,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:05,380 - uvicorn.access - INFO - 127.0.0.1:49378 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:41:05,402 - uvicorn.access - INFO - 127.0.0.1:49380 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:41:06,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:07,444 - uvicorn.access - INFO - 127.0.0.1:49387 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:41:07,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:07,463 - uvicorn.access - INFO - 127.0.0.1:49389 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:41:09,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:10,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:10,511 - uvicorn.access - INFO - 127.0.0.1:49395 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:41:10,531 - uvicorn.access - INFO - 127.0.0.1:49397 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:41:12,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:13,460 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:14,461 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:41:15,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:16,466 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:18,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:19,468 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:21,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:22,477 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:24,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:25,469 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/daemon/status HTTP/1.1" 200
+2026-02-14 17:41:25,472 - uvicorn.access - INFO - 127.0.0.1:49410 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:27,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:28,465 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:29,955 - uvicorn.access - INFO - 127.0.0.1:49414 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:41:29,977 - uvicorn.access - INFO - 127.0.0.1:49416 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:41:30,463 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:31,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:32,525 - uvicorn.access - INFO - 127.0.0.1:49418 - "POST /api/move/goto HTTP/1.1" 200
+2026-02-14 17:41:32,545 - uvicorn.access - INFO - 127.0.0.1:49420 - "GET /api/state/full HTTP/1.1" 200
+2026-02-14 17:41:33,462 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:34,464 - uvicorn.access - INFO - 127.0.0.1:65058 - "GET /api/apps/current-app-status HTTP/1.1" 200
+2026-02-14 17:41:35,420 - uvicorn.error - INFO - Shutting down
+2026-02-14 17:41:35,522 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-02-14 17:41:35,523 - root - INFO - Dataset updater task cancelled
+2026-02-14 17:41:35,523 - root - INFO - Shutting down app manager...
+2026-02-14 17:41:35,523 - root - INFO - Shutting down daemon...
+2026-02-14 17:41:35,523 - reachy_mini.daemon.daemon - INFO - Stopping Reachy Mini daemon...
+2026-02-14 17:41:35,523 - reachy_mini.daemon.daemon - INFO - Putting Reachy Mini to sleep...
+2026-02-14 17:41:35,562 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream opened.
+2026-02-14 17:41:39,775 - reachy_mini.media.audio_base - INFO - SoundDevice audio output stream closed.
+2026-02-14 17:41:39,806 - reachy_mini.daemon.daemon - INFO - Daemon stopped successfully.
+2026-02-14 17:41:39,806 - uvicorn.error - INFO - Application shutdown complete.
+2026-02-14 17:41:39,807 - uvicorn.error - INFO - Finished server process [45115]
