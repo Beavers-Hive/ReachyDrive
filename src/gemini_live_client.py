@@ -14,13 +14,14 @@ from PIL import Image
 import io
 import re # Added for sentence splitting
 from .websocket_client import ReachyWebSocketClient
+from .ble_led_controller import BLELedController
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class GeminiLiveClient:
-    def __init__(self, mcp_wrapper: ReachyMCPWrapper, maps_client: GoogleMapsClient, voicevox_client: VoicevoxClient, reachy_io):
+    def __init__(self, mcp_wrapper: ReachyMCPWrapper, maps_client: GoogleMapsClient, voicevox_client: VoicevoxClient, reachy_io, led_controller: BLELedController):
         self.api_key = os.getenv("GEMINI_API_KEY")
         if not self.api_key:
              raise ValueError("GEMINI_API_KEY not found")
@@ -33,6 +34,7 @@ class GeminiLiveClient:
         self.voicevox_client = voicevox_client
         self.voicevox_client = voicevox_client
         self.reachy_io = reachy_io
+        self.led_controller = led_controller
         
         # WebSocket Client
         self.ws_uri = os.getenv("WEBSOCKET_URL", "ws://localhost:8080/ws")
@@ -81,6 +83,20 @@ class GeminiLiveClient:
                 parameters=Schema(
                     type=Type.OBJECT,
                     properties={},
+                )
+            ),
+            FunctionDeclaration(
+                name="controlLED",
+                description="Control the LED lights. Use this to express emotions or status. 'rainbow' for excitement, 'blink' for attention, 'off' to turn off.",
+                parameters=Schema(
+                    type=Type.OBJECT,
+                    properties={
+                        "pattern": Schema(
+                            type=Type.STRING,
+                            description="The LED pattern. Options: 'rainbow', 'blink', 'off', 'speaking', 'error', 'ok'."
+                        )
+                    },
+                    required=["pattern"]
                 )
             )
         ])
@@ -254,28 +270,36 @@ class GeminiLiveClient:
             # Send to WebSocket
             await self.ws_client.send_text_event(text, speaker="robot")
 
+
+
     async def _audio_output_worker(self):
         """
         Consumes audio from queue and plays it.
+        Syncs LED with speech.
         """
         try:
             while True:
                 audio_data = await self._audio_queue.get()
-                # Use a more high-level playback that handles WAV/headers if needed
-                # reachy_io.play_audio is sync and blocking, but we want to play
-                # in a way that doesn't block the loop.
-                # Actually, reachy_io.play_stream_chunk takes raw bytes and queues them.
-                # We need to strip the header if it's there.
                 
+                # Turn on LED for speaking
+                self.led_controller.send("speaking")
+                
+                # Use play_audio_async which correctly reads WAV sample rate
+                # Style-Bert-VITS2 outputs at 44100Hz, not 24000Hz
                 if audio_data.startswith(b'RIFF'):
-                    # Strip 44 bytes header
-                    raw_pcm = audio_data[44:]
-                    self.reachy_io.play_stream_chunk(raw_pcm)
+                    await self.reachy_io.play_audio_async(audio_data)
                 else:
                     self.reachy_io.play_stream_chunk(audio_data)
+                    duration = len(audio_data) / (24000 * 2)
+                    await asyncio.sleep(duration + 0.1)
+                
+                # Turn off LED after playback if queue is empty
+                if self._audio_queue.empty():
+                    self.led_controller.send("off")
                 
                 self._audio_queue.task_done()
         except asyncio.CancelledError:
+            self.led_controller.send("off")
             pass
 
     async def _handle_tool_calls(self, session, tool_call, mcp_session):
@@ -310,6 +334,12 @@ class GeminiLiveClient:
                 result = await self._analyze_camera("front")
             elif name == "checkDriver":
                 result = await self._analyze_camera("driver")
+            
+            # LED Control
+            elif name == "controlLED":
+                pattern = args.get("pattern", "rainbow")
+                self.led_controller.send(pattern)
+                result = f"LED pattern set to {pattern}"
             
             # MCP Tools
             elif name in ["expressEmotion", "performGesture", "lookAtDirection", "nodHead", "shakeHead"]:
@@ -452,8 +482,8 @@ class GeminiLiveClient:
         last_env_check = start_time
         last_driver_check = start_time + 30  # Offset to avoid collision
         
-        INTERVAL_ENV = 120     # 2 minutes
-        INTERVAL_DRIVER = 60   # 1 minute
+        INTERVAL_ENV = 1200     # 2 minutes
+        INTERVAL_DRIVER = 600   # 1 minute
         
         try:
             while True:
@@ -498,7 +528,7 @@ class GeminiLiveClient:
                         # 4. Analyze and speak
                         await self._speak_image_analysis(
                             frame,
-                            "あなたは運転席のアシスタントロボットです。この画像にはドライバーが写っています。ドライバーの様子を見て、眠そうなら注意喚起し、そうでなければ軽く気遣う言葉をかけてください。自然な話し言葉で2〜3文で話してください。マークダウンは使わないでください。"
+                            "あなたは運転席のアシスタントロボットです。この画像にはドライバーが写っています。ドライバーの様子を見て、眠そうなら注意喚起し、そうでなければ軽く気遣う言葉をかけてください。「はい、わかりました」「承知しました」などの前置きは絶対に言わないでください。直接ドライバーに話しかけるように、自然な話し言葉で1〜2文で短く話してください。マークダウンは使わないでください。"
                         )
                     else:
                         logger.warning("MCP Session not active for Driver Check")

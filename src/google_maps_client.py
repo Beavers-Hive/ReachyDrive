@@ -16,8 +16,16 @@ class GoogleMapsClient:
         Returns a formatted string with place recommendations.
         """
         try:
-            # simple text search
-            places_result = self.client.places(query=query)
+            # Default location: Kyobashi Station, Osaka
+            default_location = (34.6977, 135.5357)
+            
+            # simple text search with Japanese language
+            places_result = self.client.places(
+                query=query,
+                language='ja',
+                location=default_location,
+                radius=5000
+            )
             
             if not places_result.get('results'):
                 return "すみません、その場所は見つかりませんでした。", []

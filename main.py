@@ -9,6 +9,7 @@ from src.google_maps_client import GoogleMapsClient
 from src.reachy_io_client import ReachyIOClient
 from src.mcp_client_wrapper import ReachyMCPWrapper
 from src.voicevox_client import VoicevoxClient
+from src.ble_led_controller import BLELedController
 from mcp import ClientSession
 from mcp.client.stdio import stdio_client
 
@@ -40,10 +41,16 @@ async def main():
     except Exception as e:
         print(f"Failed to initialize Reachy MCP Wrapper: {e}")
         return
+        return
+
+    # Initialize BLE LED Controller
+    led_controller = BLELedController()
+    led_controller.start()
+    print("BLE LED Controller started.")
 
     # Initialize Gemini Live Client
     try:
-        gemini_client = GeminiLiveClient(mcp_wrapper, maps_client, voicevox_client, reachy_io)
+        gemini_client = GeminiLiveClient(mcp_wrapper, maps_client, voicevox_client, reachy_io, led_controller)
         print("Gemini Live Client initialized.")
     except Exception as e:
         print(f"Failed to initialize Gemini Client: {e}")
@@ -60,6 +67,9 @@ async def main():
 
             # Start Live Session
             await gemini_client.run(session)
+            
+    # Cleanup
+    led_controller.stop()
 
 if __name__ == "__main__":
     try:

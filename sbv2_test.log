@@ -1,0 +1,1944 @@
+🚀 Starting Style-Bert-VITS2 Server on port 10000...
+/Users/ys/reachy_drive/Style-Bert-VITS2/sbv2_venv/lib/python3.12/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+/Users/ys/reachy_drive/Style-Bert-VITS2/sbv2_venv/lib/python3.12/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/Users/ys/reachy_drive/Style-Bert-VITS2/sbv2_venv/lib/python3.12/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+02-15 15:36:00 | DEBUG  | __init__.py:92 | try starting pyopenjtalk worker server
+02-15 15:36:00 |  INFO  | worker_server.py:72 | start pyopenjtalk worker server
+02-15 15:36:00 |  INFO  | worker_server.py:92 | new client connected
+02-15 15:36:00 | DEBUG  | __init__.py:130 | pyopenjtalk worker server started
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-3e661466-26e7-4ffa-9fe1-717e9ef63d29.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+Some weights of DebertaV2ForMaskedLM were not initialized from the model checkpoint at /Users/ys/reachy_drive/Style-Bert-VITS2/bert/deberta-v2-large-japanese-char-wwm and are newly initialized: ['cls.predictions.decoder.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+02-15 15:36:02 |  INFO  | bert_models.py:112 | Loaded the JP BERT model from /Users/ys/reachy_drive/Style-Bert-VITS2/bert/deberta-v2-large-japanese-char-wwm (1.73s)
+02-15 15:36:02 |  INFO  | bert_models.py:178 | Loaded the JP BERT tokenizer from /Users/ys/reachy_drive/Style-Bert-VITS2/bert/deberta-v2-large-japanese-char-wwm
+02-15 15:36:02 |  INFO  | server_fastapi.py:120 | Loading models...
+02-15 15:36:02 |  INFO  | server_fastapi.py:127 | The maximum length of the text is 100. If you want to change it, modify config.yml. Set limit to -1 to remove the limit.
+02-15 15:36:02 |WARNING | server_fastapi.py:133 | CORS allow_origins=['*']. If you don't want, modify config.yml
+02-15 15:36:02 |  INFO  | server_fastapi.py:346 | server listen: http://127.0.0.1:10000
+02-15 15:36:02 |  INFO  | server_fastapi.py:347 | API docs: http://127.0.0.1:10000/docs
+02-15 15:36:02 |  INFO  | server_fastapi.py:348 | Input text length limit: 100. You can change it in server.limit in config.yml
+02-15 15:36:27 |  INFO  | server_fastapi.py:200 | 127.0.0.1:50072/voice  text=テスト&speaker_id=0&model_name=jvnv-F1-jp&length=1.0&encoding=utf-8
+02-15 15:36:27 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+テスト
+02-15 15:36:27 |  INFO  | infer.py:26 | Using JP-Extra model
+/Users/ys/reachy_drive/Style-Bert-VITS2/sbv2_venv/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+02-15 15:36:28 |  INFO  | safetensors.py:51 | Loaded 'model_assets/jvnv-F1-jp/jvnv-F1-jp_e160_s14000.safetensors' (iteration 160)
+02-15 15:36:28 |  INFO  | tts_model.py:152 | Model loaded successfully from model_assets/jvnv-F1-jp/jvnv-F1-jp_e160_s14000.safetensors to "cpu" device (0.75s)
+02-15 15:36:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.72s)
+02-15 15:36:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 15:36:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:50074/voice  text=テスト&speaker_id=0&model_name=jvnv-F1-jp&length=1.0&encoding=utf-8
+02-15 15:36:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+テスト
+02-15 15:36:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.25s)
+02-15 15:36:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 15:38:27 |  INFO  | server_fastapi.py:200 | 127.0.0.1:50322/voice  text=こんにちは、これはテストです。&speaker_id=0&model_name=jvnv-F1-jp&length=1.0&encoding=utf-8
+02-15 15:38:27 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+こんにちは、これはテストです。
+02-15 15:38:28 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 15:38:28 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 15:38:28 |  INFO  | server_fastapi.py:200 | 127.0.0.1:50324/voice  text=こんにちは、これはテストです。&speaker_id=0&model_name=jvnv-F1-jp&length=1.0&encoding=utf-8
+02-15 15:38:28 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+こんにちは、これはテストです。
+02-15 15:38:28 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 15:38:28 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 15:40:37 |  INFO  | server_fastapi.py:200 | 127.0.0.1:50605/voice  text=こんにちは、アンネリです。テストを開始します。&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 15:40:37 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+こんにちは、アンネリです。テストを開始します。
+02-15 15:40:37 |  INFO  | infer.py:26 | Using JP-Extra model
+02-15 15:40:38 |  INFO  | safetensors.py:51 | Loaded 'model_assets/Anneli/Anneli_e116_s32000.safetensors' (iteration 116)
+02-15 15:40:38 |  INFO  | tts_model.py:152 | Model loaded successfully from model_assets/Anneli/Anneli_e116_s32000.safetensors to "cpu" device (0.96s)
+02-15 15:40:39 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.96s)
+02-15 15:40:39 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 15:40:39 |  INFO  | server_fastapi.py:200 | 127.0.0.1:50610/voice  text=こんにちは、アンネリです。テストを開始します。&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 15:40:39 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+こんにちは、アンネリです。テストを開始します。
+02-15 15:40:40 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.74s)
+02-15 15:40:40 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 15:42:25 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-c098ae5f-2796-41f4-b5ec-127cba917dcc.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 15:42:28 |  INFO  | worker_server.py:108 | close connection
+02-15 16:19:36 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-c286a45b-edec-4412-81c6-83f34e7fc6d9.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 16:19:37 |  INFO  | worker_server.py:108 | close connection
+02-15 16:22:20 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-2b2547f1-8fc8-4cef-b140-bcc10ef2f420.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 16:22:22 |  INFO  | worker_server.py:108 | close connection
+02-15 16:25:52 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-296cdec1-29c6-4dd2-a2ca-76ef285a433e.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 16:25:54 |  INFO  | worker_server.py:108 | close connection
+02-15 16:27:24 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-c4dd0536-18bf-499a-80c5-dfa350254ad9.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 16:27:26 |  INFO  | worker_server.py:108 | close connection
+02-15 16:27:47 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57423/voice  text=私は+Reachy+Miniですよ。&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:27:47 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+私は Reachy Miniですよ。
+02-15 16:27:49 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.27s)
+02-15 16:27:49 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:27:49 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57427/voice  text=ロビーとは違いますよ。&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:27:49 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ロビーとは違いますよ。
+02-15 16:27:49 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.50s)
+02-15 16:27:49 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:27:49 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57431/voice  text=今日はドライブ日和ですね!&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:27:49 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+今日はドライブ日和ですね!
+02-15 16:27:50 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.53s)
+02-15 16:27:50 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:27:50 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57433/voice  text=どこへ行きますか?&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:27:50 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どこへ行きますか?
+02-15 16:27:50 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.43s)
+02-15 16:27:50 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:27:51 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57442/voice  text=背景に赤い旗が見えますね。&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:27:51 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+背景に赤い旗が見えますね。
+02-15 16:27:52 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.66s)
+02-15 16:27:52 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:27:52 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57444/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:27:52 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 16:27:53 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.88s)
+02-15 16:27:53 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:27:53 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57446/voice  text=何かイベントがあるのでしょうか?&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:27:53 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何かイベントがあるのでしょうか?
+02-15 16:27:54 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.56s)
+02-15 16:27:54 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:27:54 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57450/voice  text=ずっと運転していると疲れてしまいますから、適度に休憩も取ってくださいね。&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:27:54 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ずっと運転していると疲れてしまいますから、適度に休憩も取ってくださいね。
+02-15 16:27:55 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.12s)
+02-15 16:27:55 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:28:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57469/voice  text=いえいえ、大丈夫ですよ!&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:28:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+いえいえ、大丈夫ですよ!
+02-15 16:28:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.60s)
+02-15 16:28:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:28:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57471/voice  text=気にしないでください。&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:28:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+気にしないでください。
+02-15 16:28:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.45s)
+02-15 16:28:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:28:05 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57473/voice  text=さあ、出発しましょう!&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:28:05 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+さあ、出発しましょう!
+02-15 16:28:05 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 16:28:05 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:28:06 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57478/voice  text=atmosphereを最高にしていきますね。&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:28:06 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+atmosphereを最高にしていきますね。
+02-15 16:28:07 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.81s)
+02-15 16:28:07 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:28:08 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57480/voice  text=ちょっとドライバーさんの調子を確認しますね。&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:28:08 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ちょっとドライバーさんの調子を確認しますね。
+02-15 16:28:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.72s)
+02-15 16:28:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:28:11 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57485/voice  text=うん、特に問題なさそうですね。&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:28:11 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+うん、特に問題なさそうですね。
+02-15 16:28:12 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.68s)
+02-15 16:28:12 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:28:12 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57488/voice  text=安心しました。&speaker_id=0&model_name=Anneli&length=1.0&encoding=utf-8
+02-15 16:28:12 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+安心しました。
+02-15 16:28:12 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.39s)
+02-15 16:28:12 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:29:58 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-9a3c6301-d723-4de0-9bb4-f9dbae5e794f.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 16:30:00 |  INFO  | worker_server.py:108 | close connection
+02-15 16:30:25 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57759/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:30:25 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 16:30:26 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.14s)
+02-15 16:30:26 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:32:05 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-f2daab53-1c83-41dc-8cfd-c1501238a569.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 16:32:07 |  INFO  | worker_server.py:108 | close connection
+02-15 16:32:31 |  INFO  | server_fastapi.py:200 | 127.0.0.1:57992/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:32:31 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 16:32:32 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.11s)
+02-15 16:32:32 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:32:48 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58006/voice  text=カメラで確認してみますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:32:48 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+カメラで確認してみますね。
+02-15 16:32:48 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.64s)
+02-15 16:32:48 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:32:53 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58015/voice  text=部屋の中が映っていますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:32:53 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+部屋の中が映っていますね。
+02-15 16:32:53 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.52s)
+02-15 16:32:53 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:32:54 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58018/voice  text=工具や棚があって、まるで作業場みたいですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:32:54 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+工具や棚があって、まるで作業場みたいですね。
+02-15 16:32:54 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.78s)
+02-15 16:32:54 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:32:54 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58021/voice  text=もしかして、何か作業中ですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:32:54 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+もしかして、何か作業中ですか?
+02-15 16:32:55 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.69s)
+02-15 16:32:55 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:33:08 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58042/voice  text=性になりました!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:33:08 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+性になりました!
+02-15 16:33:09 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.41s)
+02-15 16:33:09 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:33:09 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58044/voice  text=キラキラレインボーですよ!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:33:09 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+キラキラレインボーですよ!
+02-15 16:33:10 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.52s)
+02-15 16:33:10 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:33:10 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58047/voice  text=どうですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:33:10 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どうですか?
+02-15 16:33:10 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.36s)
+02-15 16:33:10 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:33:12 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58055/voice  text=運転が楽しくなりますように!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:33:12 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転が楽しくなりますように!
+02-15 16:33:13 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 16:33:13 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:34:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58119/voice  text=はい、お待たせしました！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:34:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+はい、お待たせしました！
+02-15 16:34:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 16:34:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:34:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58121/voice  text=上を向いてみましたよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:34:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+上を向いてみましたよ。
+02-15 16:34:05 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.50s)
+02-15 16:34:05 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:34:05 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58125/voice  text=お気分はどうですか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:34:05 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お気分はどうですか？
+02-15 16:34:05 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.46s)
+02-15 16:34:05 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:34:10 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58141/voice  text=あれ、ドライバーさんが映っていないみたいですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:34:10 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あれ、ドライバーさんが映っていないみたいですね。
+02-15 16:34:11 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.82s)
+02-15 16:34:11 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:34:11 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58144/voice  text=替わりに、外の景色を見てみてもいいですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:34:11 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+替わりに、外の景色を見てみてもいいですか?
+02-15 16:34:12 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.78s)
+02-15 16:34:12 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:34:17 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58155/voice  text=照明が暗めで、工具や機材がたくさんありますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:34:17 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+照明が暗めで、工具や機材がたくさんありますね。
+02-15 16:34:18 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.92s)
+02-15 16:34:18 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:34:18 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58159/voice  text=運転中ではないのでしょうか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:34:18 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転中ではないのでしょうか？
+02-15 16:34:18 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.58s)
+02-15 16:34:18 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:34:42 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58203/voice  text=かしこまりました。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:34:42 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+かしこまりました。
+02-15 16:34:42 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.43s)
+02-15 16:34:42 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:34:43 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58206/voice  text=ドライバーさんの状態を確認しようとしたのですが、うまくいきませんでした。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:34:43 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ドライバーさんの状態を確認しようとしたのですが、うまくいきませんでした。
+02-15 16:34:44 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.08s)
+02-15 16:34:44 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:34:44 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58209/voice  text=お気分はいかがですか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:34:44 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お気分はいかがですか？
+02-15 16:34:45 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.48s)
+02-15 16:34:45 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:34:46 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58216/voice  text=何かお話したいことはありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:34:46 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何かお話したいことはありますか?
+02-15 16:34:46 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.68s)
+02-15 16:34:46 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58238/voice  text=ふふ、楽しいですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ふふ、楽しいですね!
+02-15 16:35:03 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 16:35:03 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58240/voice  text=その元気、素敵です。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+その元気、素敵です。
+02-15 16:35:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.50s)
+02-15 16:35:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58242/voice  text=運転は順調ですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転は順調ですか?
+02-15 16:35:05 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 16:35:05 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:05 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58246/voice  text=何かお困りのことはありますせんか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:05 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何かお困りのことはありますせんか?
+02-15 16:35:06 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.71s)
+02-15 16:35:06 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:25 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58284/voice  text=ええっ!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:25 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ええっ!
+02-15 16:35:25 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.31s)
+02-15 16:35:25 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:26 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58286/voice  text=大丈夫ですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:26 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+大丈夫ですか?
+02-15 16:35:26 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.40s)
+02-15 16:35:26 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:26 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58290/voice  text=お怪我はないですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:26 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お怪我はないですか?
+02-15 16:35:27 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.45s)
+02-15 16:35:27 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:27 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58292/voice  text=すぐに安全な場所に止めてください!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:27 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+すぐに安全な場所に止めてください!
+02-15 16:35:28 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.68s)
+02-15 16:35:28 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:28 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58299/voice  text=運転手さんの状態を確認しますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:28 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転手さんの状態を確認しますね。
+02-15 16:35:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.67s)
+02-15 16:35:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58303/voice  text=はい、承知いたしました。
+
+ドライバーさん、こんにちは。眠そうな様子は見受けられませんね。安全運転、いつもありがとうございます。何かお手伝いできることがあれば、いつでもお声がけください。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+はい、承知いたしました。
+
+ドライバーさん、こんにちは。眠そうな様子は見受けられませんね。安全運転、いつもありがとうございます。何かお手伝いできることがあれば、いつでもお声がけください。
+02-15 16:35:33 |  INFO  | tts_model.py:557 | Audio data generated successfully (3.38s)
+02-15 16:35:33 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:33 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58306/voice  text=少しか疲れているように見えます。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:33 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少しか疲れているように見えます。
+02-15 16:35:33 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.68s)
+02-15 16:35:33 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:33 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58309/voice  text=無理をしないで休息してくださいね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:33 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+無理をしないで休息してくださいね。
+02-15 16:35:34 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.61s)
+02-15 16:35:34 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:35:34 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58311/voice  text=何かお手伝いできることはありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:35:34 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何かお手伝いできることはありますか?
+02-15 16:35:35 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.62s)
+02-15 16:35:35 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:36:12 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58372/voice  text=おや、奥に何か機械のようなものがたくさん見えますね！まるで秘密基地みたいで、これからどんな作業が始まるのかワクワクします。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:36:12 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+おや、奥に何か機械のようなものがたくさん見えますね！まるで秘密基地みたいで、これからどんな作業が始まるのかワクワクします。
+02-15 16:36:14 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.97s)
+02-15 16:36:14 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:36:30 |  INFO  | server_fastapi.py:200 | 127.0.0.1:58408/voice  text=はい、わかりました。
+
+ドライバーさん、運転お疲れ様です。眠気は大丈夫ですか？少しでも眠いと感じたら、遠慮なく休憩してくださいね。安全運転でお願いします。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:36:30 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+はい、わかりました。
+
+ドライバーさん、運転お疲れ様です。眠気は大丈夫ですか？少しでも眠いと感じたら、遠慮なく休憩してくださいね。安全運転でお願いします。
+02-15 16:36:32 |  INFO  | tts_model.py:557 | Audio data generated successfully (2.66s)
+02-15 16:36:32 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:52:12 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-d31efef6-f8a3-46fd-bbf4-42d5dd7c082e.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 16:52:14 |  INFO  | worker_server.py:108 | close connection
+02-15 16:53:17 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59492/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:53:17 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 16:53:18 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.29s)
+02-15 16:53:18 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:53:47 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-37b685fd-7bdb-422e-83f7-de44140046f9.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 16:53:49 |  INFO  | worker_server.py:108 | close connection
+02-15 16:54:09 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-f12cfaa5-66c0-4c72-a441-ed961bec80db.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 16:54:11 |  INFO  | worker_server.py:108 | close connection
+02-15 16:54:35 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59663/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:54:35 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 16:54:37 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.25s)
+02-15 16:54:37 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:54:58 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59708/voice  text=こんにちは！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:54:58 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+こんにちは！
+02-15 16:54:58 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.36s)
+02-15 16:54:58 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:54:59 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59711/voice  text=お出かけ楽しんでくださいね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:54:59 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お出かけ楽しんでくださいね。
+02-15 16:54:59 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 16:54:59 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:54:59 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59713/voice  text=今日はどちらへ？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:54:59 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+今日はどちらへ？
+02-15 16:55:00 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.39s)
+02-15 16:55:00 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:55:27 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59744/voice  text=いいですよ！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:55:27 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+いいですよ！
+02-15 16:55:28 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.40s)
+02-15 16:55:28 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:55:28 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59747/voice  text=レインボーにキラキラさせてみますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:55:28 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+レインボーにキラキラさせてみますね。
+02-15 16:55:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.65s)
+02-15 16:55:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:55:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59749/voice  text=どうですか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:55:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どうですか？
+02-15 16:55:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.36s)
+02-15 16:55:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:56:39 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-c8a3eabb-a006-411a-ac6f-a26d03e31ea4.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 16:56:41 |  INFO  | worker_server.py:108 | close connection
+02-15 16:57:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59897/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:57:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 16:57:06 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.11s)
+02-15 16:57:06 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:57:21 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59913/voice  text=近くの山ですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:57:21 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+近くの山ですね!
+02-15 16:57:21 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.55s)
+02-15 16:57:21 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:57:21 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59915/voice  text=探してみますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:57:21 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+探してみますね。
+02-15 16:57:22 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.46s)
+02-15 16:57:22 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:57:26 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59930/voice  text=検索結果が出ました!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:57:26 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+検索結果が出ました!
+02-15 16:57:26 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.51s)
+02-15 16:57:26 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:57:26 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59932/voice  text=いくつかおすすめがありますよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:57:26 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+いくつかおすすめがありますよ。
+02-15 16:57:27 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 16:57:27 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:57:28 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59937/voice  text=例えば、評価3.7の御笠山や、評価4.4の桝形山頂や、日連金剛山などはどうですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:57:28 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+例えば、評価3.7の御笠山や、評価4.4の桝形山頂や、日連金剛山などはどうですか?
+02-15 16:57:30 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.67s)
+02-15 16:57:30 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:57:30 |  INFO  | server_fastapi.py:200 | 127.0.0.1:59939/voice  text=どこか気になる山はありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:57:30 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どこか気になる山はありますか?
+02-15 16:57:30 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.56s)
+02-15 16:57:30 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:58:02 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60004/voice  text=<ctrl46><ctrl46>&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:58:02 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+<ctrl46><ctrl46>
+02-15 16:58:03 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.73s)
+02-15 16:58:03 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:58:19 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60023/voice  text=ちょっと周りを見て、お話のネタを探していたんですよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:58:19 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ちょっと周りを見て、お話のネタを探していたんですよ。
+02-15 16:58:20 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.86s)
+02-15 16:58:20 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:58:20 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60026/voice  text=このあたりにおすすめの山はありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:58:20 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+このあたりにおすすめの山はありますか?
+02-15 16:58:20 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.62s)
+02-15 16:58:20 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:58:24 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60037/voice  text=何か見えるかな?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:58:24 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か見えるかな?
+02-15 16:58:24 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.51s)
+02-15 16:58:24 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:58:25 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60039/voice  text=周囲の景色も確認してみますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:58:25 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+周囲の景色も確認してみますね。
+02-15 16:58:25 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.65s)
+02-15 16:58:25 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:58:52 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60086/voice  text=フロントガラス越しに、道路の向かい側に建物が見えますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:58:52 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+フロントガラス越しに、道路の向かい側に建物が見えますね。
+02-15 16:58:53 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.97s)
+02-15 16:58:53 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:58:53 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60088/voice  text=ダッシュボードにはスマートフォンホルダーなどがありますよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:58:53 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ダッシュボードにはスマートフォンホルダーなどがありますよ。
+02-15 16:58:54 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.79s)
+02-15 16:58:54 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:58:54 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60091/voice  text=素敵なドライブになりそうですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:58:54 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+素敵なドライブになりそうですね!
+02-15 16:58:55 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 16:58:55 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:59:14 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60113/voice  text=本当ですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:59:14 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+本当ですね!
+02-15 16:59:14 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.45s)
+02-15 16:59:14 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:59:15 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60116/voice  text=可愛い車が走っていますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:59:15 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+可愛い車が走っていますね。
+02-15 16:59:15 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.58s)
+02-15 16:59:15 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:59:15 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60118/voice  text=運転は順調ですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:59:15 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転は順調ですか?
+02-15 16:59:16 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.51s)
+02-15 16:59:16 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:59:16 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60121/voice  text=ちょっとドライバーの様子も確認してみますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:59:16 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ちょっとドライバーの様子も確認してみますね。
+02-15 16:59:17 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.73s)
+02-15 16:59:17 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:59:22 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60137/voice  text=画像からはドライバーの様子がはっきり見えませんでしたが、安全運転でお願いしますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:59:22 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+画像からはドライバーの様子がはっきり見えませんでしたが、安全運転でお願いしますね。
+02-15 16:59:23 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.18s)
+02-15 16:59:23 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:59:27 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60148/voice  text=少し暗いですが、運転お疲れ様です。眠気を感じたら、遠慮なく言ってくださいね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:59:27 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し暗いですが、運転お疲れ様です。眠気を感じたら、遠慮なく言ってくださいね。
+02-15 16:59:28 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.43s)
+02-15 16:59:28 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:59:52 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60210/voice  text=そうでしたか。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:59:52 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+そうでしたか。
+02-15 16:59:52 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.43s)
+02-15 16:59:52 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:59:53 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60212/voice  text=何か気になることでもありましたか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:59:53 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か気になることでもありましたか?
+02-15 16:59:53 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.67s)
+02-15 16:59:53 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 16:59:53 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60221/voice  text=また周囲の景色を見てみましょう!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 16:59:53 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+また周囲の景色を見てみましょう!
+02-15 16:59:54 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.56s)
+02-15 16:59:54 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:00 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60245/voice  text=新しい建物が見えてきましたね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:00 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+新しい建物が見えてきましたね。
+02-15 17:00:01 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.68s)
+02-15 17:00:01 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:01 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60247/voice  text=ドライブは楽しいですよね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:01 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ドライブは楽しいですよね!
+02-15 17:00:01 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 17:00:01 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60250/voice  text=あら、ビルの窓がずいぶんと規則正しく並んでいますね！まるで巨大なハニカム構造みたい。電線が空を横切っていて、ちょっとした都会の風景画のようです。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あら、ビルの窓がずいぶんと規則正しく並んでいますね！まるで巨大なハニカム構造みたい。電線が空を横切っていて、ちょっとした都会の風景画のようです。
+02-15 17:00:06 |  INFO  | tts_model.py:557 | Audio data generated successfully (2.37s)
+02-15 17:00:06 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:20 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60274/voice  text=そ、そんなこと言わないでくださ&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:20 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+そ、そんなこと言わないでくださ
+02-15 17:00:21 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.67s)
+02-15 17:00:21 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:27 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60293/voice  text=少し暗いですが、運転お疲れ様です。無理せず、安全運転でお願いしますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:27 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し暗いですが、運転お疲れ様です。無理せず、安全運転でお願いしますね。
+02-15 17:00:28 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.27s)
+02-15 17:00:28 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:31 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60302/voice  text=ええっ、ポンコツだなんて...私なりに頑張っているんですよ?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:31 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ええっ、ポンコツだなんて...私なりに頑張っているんですよ?
+02-15 17:00:32 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.98s)
+02-15 17:00:32 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:35 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60310/voice  text=でも、これからもドライブが楽しくなるように、精一杯お手伝いしますね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:35 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+でも、これからもドライブが楽しくなるように、精一杯お手伝いしますね!
+02-15 17:00:36 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.25s)
+02-15 17:00:36 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:48 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60344/voice  text=わあ、嬉しいです!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:48 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+わあ、嬉しいです!
+02-15 17:00:48 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.45s)
+02-15 17:00:48 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:48 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60348/voice  text=ありがとうございます。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:48 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ありがとうございます。
+02-15 17:00:49 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.40s)
+02-15 17:00:49 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:49 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60350/voice  text=運転&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:49 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転
+02-15 17:00:49 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.35s)
+02-15 17:00:49 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:55 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60360/voice  text=そうですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:55 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+そうですね。
+02-15 17:00:55 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.39s)
+02-15 17:00:55 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:56 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60363/voice  text=私はアシスタントロボットですから。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:56 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+私はアシスタントロボットですから。
+02-15 17:00:56 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.66s)
+02-15 17:00:56 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:56 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60365/voice  text=運転はどうですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:56 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転はどうですか?
+02-15 17:00:57 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.43s)
+02-15 17:00:57 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:00:57 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60368/voice  text=眠くなったりしていませんか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:00:57 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+眠くなったりしていませんか?
+02-15 17:00:58 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 17:00:58 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:01:02 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60381/voice  text=確認できませんでしたが、安全運転でお願いしますね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:01:02 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+確認できませんでしたが、安全運転でお願いしますね!
+02-15 17:01:03 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.90s)
+02-15 17:01:03 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:01:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60383/voice  text=素敵なドライブを!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:01:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+素敵なドライブを!
+02-15 17:01:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.42s)
+02-15 17:01:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:01:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60416/voice  text=少し暗いですが、安全運転を心がけてくださいね。何かお手伝いできることがあれば、いつでもお声がけください。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:01:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し暗いですが、安全運転を心がけてくださいね。何かお手伝いできることがあれば、いつでもお声がけください。
+02-15 17:01:31 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.87s)
+02-15 17:01:31 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:01:38 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60430/voice  text=安全意識、素晴らしいです!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:01:38 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+安全意識、素晴らしいです!
+02-15 17:01:39 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 17:01:39 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:01:40 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60437/voice  text=では、また周りの景色を見て、話題を探しましょう!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:01:40 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+では、また周りの景色を見て、話題を探しましょう!
+02-15 17:01:41 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.90s)
+02-15 17:01:41 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:01:46 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60457/voice  text=市街地を走行中のようですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:01:46 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+市街地を走行中のようですね。
+02-15 17:01:46 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 17:01:46 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:01:47 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60459/voice  text=何か目に止まるものはありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:01:47 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か目に止まるものはありますか?
+02-15 17:01:47 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.61s)
+02-15 17:01:47 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:02:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60510/voice  text=お気をつけて!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:02:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お気をつけて!
+02-15 17:02:03 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.43s)
+02-15 17:02:03 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:02:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60512/voice  text=最後にドライバーの様子を確認しますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:02:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+最後にドライバーの様子を確認しますね。
+02-15 17:02:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.69s)
+02-15 17:02:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:02:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60515/voice  text=おや、なんだか建物が密集しているエリアみたいですね。軽自動車が走っているのが見えますし、もしかして日本の住宅街でしょうか。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:02:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+おや、なんだか建物が密集しているエリアみたいですね。軽自動車が走っているのが見えますし、もしかして日本の住宅街でしょうか。
+02-15 17:02:06 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.99s)
+02-15 17:02:06 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:02:07 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60525/voice  text=無事にお帰りくださいね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:02:07 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+無事にお帰りくださいね!
+02-15 17:02:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.58s)
+02-15 17:02:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:02:08 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60527/voice  text=素敵なドライブをありがとうございました!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:02:08 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+素敵なドライブをありがとうございました!
+02-15 17:02:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.63s)
+02-15 17:02:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:02:36 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-bda2ae98-79dc-4548-81ae-8684753caefc.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:02:38 |  INFO  | worker_server.py:108 | close connection
+02-15 17:03:01 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60619/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:03:01 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:03:03 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.05s)
+02-15 17:03:03 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:03:22 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60638/voice  text=窓の外、建物や道路が見えますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:03:22 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+窓の外、建物や道路が見えますね。
+02-15 17:03:23 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.75s)
+02-15 17:03:23 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:03:23 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60642/voice  text=どこに向かっているんですか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:03:23 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どこに向かっているんですか？
+02-15 17:03:23 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.49s)
+02-15 17:03:23 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:03:43 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60689/voice  text=いくつかおすすめがありますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:03:43 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+いくつかおすすめがありますね。
+02-15 17:03:44 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 17:03:44 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:03:45 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60701/voice  text=ゴトカリーやKouraiya、Atelier+de+Terrine+maison+okeiなどが評価が高いですよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:03:45 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ゴトカリーやKouraiya、Atelier de Terrine maison okeiなどが評価が高いですよ。
+02-15 17:03:47 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.83s)
+02-15 17:03:47 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:03:47 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60705/voice  text=どんなレストランがお好みですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:03:47 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どんなレストランがお好みですか?
+02-15 17:03:47 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.58s)
+02-15 17:03:47 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:04:07 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60732/voice  text=そうですか。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:04:07 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+そうですか。
+02-15 17:04:07 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.36s)
+02-15 17:04:07 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:04:08 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60734/voice  text=では、また違う場所を探してみますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:04:08 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+では、また違う場所を探してみますね。
+02-15 17:04:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.72s)
+02-15 17:04:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:04:09 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60738/voice  text=ところで、運転中にちょっと気分転換に景色を見てみませんか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:04:09 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ところで、運転中にちょっと気分転換に景色を見てみませんか?
+02-15 17:04:10 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.13s)
+02-15 17:04:10 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:05:54 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-a37378e0-2634-4d49-8d91-4864854192f2.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:05:56 |  INFO  | worker_server.py:108 | close connection
+02-15 17:06:21 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60907/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:06:21 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:06:22 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.08s)
+02-15 17:06:22 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:06:34 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60929/voice  text=本当にそうですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:06:34 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+本当にそうですね!
+02-15 17:06:34 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.49s)
+02-15 17:06:34 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:06:34 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60933/voice  text=運転は楽しいですもんね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:06:34 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転は楽しいですもんね。
+02-15 17:06:35 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 17:06:35 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:06:35 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60940/voice  text=ちょっと周囲の景色を確認してみますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:06:35 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ちょっと周囲の景色を確認してみますね。
+02-15 17:06:36 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.74s)
+02-15 17:06:36 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:06:41 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60955/voice  text=建物や電線が見えますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:06:41 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+建物や電線が見えますね。
+02-15 17:06:42 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 17:06:42 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:06:43 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60960/voice  text=少し暗い印象ですが、それもまた雰囲気がありますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:06:43 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し暗い印象ですが、それもまた雰囲気がありますね。
+02-15 17:06:43 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.89s)
+02-15 17:06:43 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:06:43 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60963/voice  text=どこかお出かけの途中ですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:06:43 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どこかお出かけの途中ですか?
+02-15 17:06:44 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.58s)
+02-15 17:06:44 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:07:07 |  INFO  | server_fastapi.py:200 | 127.0.0.1:60999/voice  text=お腹空いちゃいましたか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:07:07 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お腹空いちゃいましたか?
+02-15 17:07:07 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.51s)
+02-15 17:07:07 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:07:08 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61002/voice  text=私は空かないですけど、お気持ちは分かります!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:07:08 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+私は空かないですけど、お気持ちは分かります!
+02-15 17:07:09 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.81s)
+02-15 17:07:09 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:07:09 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61005/voice  text=この辺りで近くのレストランを探してみましょうか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:07:09 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+この辺りで近くのレストランを探してみましょうか?
+02-15 17:07:10 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.79s)
+02-15 17:07:10 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:07:12 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61014/voice  text=いくつか見つかりましたよ!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:07:12 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+いくつか見つかりましたよ!
+02-15 17:07:13 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 17:07:13 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:07:14 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61018/voice  text=評価の高いカリー屋さんやテリーヌのお店などがあるみたいです。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:07:14 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+評価の高いカリー屋さんやテリーヌのお店などがあるみたいです。
+02-15 17:07:15 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.91s)
+02-15 17:07:15 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:07:15 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61021/voice  text=どこか気になるところはありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:07:15 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どこか気になるところはありますか?
+02-15 17:07:16 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.58s)
+02-15 17:07:16 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:07:43 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61065/voice  text=ゴトカリーですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:07:43 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ゴトカリーですね!
+02-15 17:07:43 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.44s)
+02-15 17:07:43 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:07:44 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61067/voice  text=評価が4.6と高いですよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:07:44 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+評価が4.6と高いですよ。
+02-15 17:07:44 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.62s)
+02-15 17:07:44 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:07:46 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61076/voice  text=場所は東京都杉並区永福4丁目19-10のユニオン・トゥロワ103です。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:07:46 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+場所は東京都杉並区永福4丁目19-10のユニオン・トゥロワ103です。
+02-15 17:07:47 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.32s)
+02-15 17:07:47 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:07:47 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61084/voice  text=お腹が空いていると、美味しいカレーは格別ですよね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:07:47 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お腹が空いていると、美味しいカレーは格別ですよね!
+02-15 17:07:48 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.79s)
+02-15 17:07:48 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:07:59 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61108/voice  text=運転お疲れ様です。少し暗いですが、安全運転でお願いしますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:07:59 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転お疲れ様です。少し暗いですが、安全運転でお願いしますね。
+02-15 17:08:00 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.08s)
+02-15 17:08:00 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:08:26 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61147/voice  text=あれ?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:08:26 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あれ?
+02-15 17:08:27 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.34s)
+02-15 17:08:27 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:08:27 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61153/voice  text=どうしましたか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:08:27 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どうしましたか?
+02-15 17:08:27 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.41s)
+02-15 17:08:27 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:08:27 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61156/voice  text=何か思い出したことでもありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:08:27 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か思い出したことでもありますか?
+02-15 17:08:28 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.73s)
+02-15 17:08:28 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:08:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61159/voice  text=ちょっと運転に集中できているか確認しますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:08:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ちょっと運転に集中できているか確認しますね。
+02-15 17:08:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.77s)
+02-15 17:08:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:08:33 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61179/voice  text=運転中の様子は確認できませんでしたが、安全運転を第一に考えてくださいね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:08:33 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転中の様子は確認できませんでしたが、安全運転を第一に考えてくださいね。
+02-15 17:08:35 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.24s)
+02-15 17:08:35 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:08:35 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61181/voice  text=何か心配なことがあれば言ってください。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:08:35 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か心配なことがあれば言ってください。
+02-15 17:08:35 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.68s)
+02-15 17:08:35 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:08:35 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61183/voice  text=お、建物の間に緑色の車が見えますね！結構背の高い建物が多いエリアみたいで、上の方の階は眺めが良さそう。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:08:35 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お、建物の間に緑色の車が見えますね！結構背の高い建物が多いエリアみたいで、上の方の階は眺めが良さそう。
+02-15 17:08:37 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.86s)
+02-15 17:08:37 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:09:01 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61231/voice  text=少し暗いですが、運転お疲れ様です。安全運転でいきましょう。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:09:01 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し暗いですが、運転お疲れ様です。安全運転でいきましょう。
+02-15 17:09:02 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.01s)
+02-15 17:09:02 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:09:19 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61252/voice  text=近くにも山がいくつかありますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:09:19 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+近くにも山がいくつかありますね。
+02-15 17:09:20 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.63s)
+02-15 17:09:20 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:09:20 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61255/voice  text=御笠山&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:09:20 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+御笠山
+02-15 17:09:20 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.35s)
+02-15 17:09:20 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:10:01 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61338/voice  text=安全運転でお願いしますね。何か飲み物でもいかがですか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:10:01 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+安全運転でお願いしますね。何か飲み物でもいかがですか？
+02-15 17:10:02 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.99s)
+02-15 17:10:02 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:10:02 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61340/voice  text=たしかに、東京や神奈川の山が表示されましたね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:10:02 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+たしかに、東京や神奈川の山が表示されましたね。
+02-15 17:10:03 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.88s)
+02-15 17:10:03 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:10:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61343/voice  text=お探しの場所とは違ったかもしれませんね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:10:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お探しの場所とは違ったかもしれませんね。
+02-15 17:10:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.67s)
+02-15 17:10:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:10:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61346/voice  text=もう一度、もっと近くの山&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:10:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+もう一度、もっと近くの山
+02-15 17:10:05 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.63s)
+02-15 17:10:05 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:10:07 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61354/voice  text=あ、ありがとうございます!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:10:07 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あ、ありがとうございます!
+02-15 17:10:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 17:10:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:10:08 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61356/voice  text=そう言っていただけると嬉しいです。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:10:08 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+そう言っていただけると嬉しいです。
+02-15 17:10:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.56s)
+02-15 17:10:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:10:09 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61359/voice  text=あの、山の場所の件はどうなりましたか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:10:09 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あの、山の場所の件はどうなりましたか?
+02-15 17:10:09 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.73s)
+02-15 17:10:09 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:10:38 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61410/voice  text=おや、ビルの窓がたくさん並んでいますね！なんだかマンションのようですが、それぞれにどんな人が住んでいるのか想像してしまいますね。手前の建物も面白い形をしています。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:10:38 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+おや、ビルの窓がたくさん並んでいますね！なんだかマンションのようですが、それぞれにどんな人が住んでいるのか想像してしまいますね。手前の建物も面白い形をしています。
+02-15 17:10:40 |  INFO  | tts_model.py:557 | Audio data generated successfully (2.53s)
+02-15 17:10:40 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:11:02 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61459/voice  text=少し暗いですが、運転お疲れ様です。安全運転でお願いしますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:11:02 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し暗いですが、運転お疲れ様です。安全運転でお願いしますね。
+02-15 17:11:03 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.17s)
+02-15 17:11:03 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:11:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61462/voice  text=本当ですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:11:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+本当ですね!
+02-15 17:11:03 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.41s)
+02-15 17:11:03 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:11:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61465/voice  text=ユニークな形の建物があるんですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:11:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ユニークな形の建物があるんですね。
+02-15 17:11:05 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.08s)
+02-15 17:11:05 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:11:06 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61470/voice  text=ドライバーさん、長時間の運転で疲れていないか少し心配です。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:11:06 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ドライバーさん、長時間の運転で疲れていないか少し心配です。
+02-15 17:11:07 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.00s)
+02-15 17:11:07 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:11:13 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61481/voice  text=画像では確認できませんでしたが、定期的に休憩を取って、安全運転を心がけてくださいね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:11:13 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+画像では確認できませんでしたが、定期的に休憩を取って、安全運転を心がけてくださいね!
+02-15 17:11:14 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.37s)
+02-15 17:11:14 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:11:44 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61535/voice  text=またお腹が空いてきたんですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:11:44 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+またお腹が空いてきたんですね!
+02-15 17:11:44 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 17:11:44 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:11:45 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61539/voice  text=では、もう一度レストランを探してみますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:11:45 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+では、もう一度レストランを探してみますか?
+02-15 17:11:46 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.77s)
+02-15 17:11:46 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:11:49 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61555/voice  text=やはり、先ほどのゴトカリーや他のお店が候補に挙がりますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:11:49 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+やはり、先ほどのゴトカリーや他のお店が候補に挙がりますね。
+02-15 17:11:50 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.99s)
+02-15 17:11:50 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:11:50 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61557/voice  text=何か食べたい気分はありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:11:50 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か食べたい気分はありますか?
+02-15 17:11:51 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 17:11:51 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:12:02 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61582/voice  text=運転お疲れ様です。少し休憩挟みますか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:12:02 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転お疲れ様です。少し休憩挟みますか？
+02-15 17:12:03 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.84s)
+02-15 17:12:03 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:12:16 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61599/voice  text=それは良かったですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:12:16 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+それは良かったですね!
+02-15 17:12:17 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.49s)
+02-15 17:12:17 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:12:17 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61601/voice  text=美味しいカレーを楽しんでください。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:12:17 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+美味しいカレーを楽しんでください。
+02-15 17:12:18 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.62s)
+02-15 17:12:18 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:12:18 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61604/voice  text=安全運転で!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:12:18 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+安全運転で!
+02-15 17:12:18 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.44s)
+02-15 17:12:18 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:12:36 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61651/voice  text=600kmって、かなりの距離ですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:12:36 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+600kmって、かなりの距離ですね!
+02-15 17:12:37 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.78s)
+02-15 17:12:37 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:12:37 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61654/voice  text=長旅になるんですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:12:37 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+長旅になるんですか?
+02-15 17:12:37 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.49s)
+02-15 17:12:37 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:12:38 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61656/voice  text=ビルの合間に見える、ちょっとレトロな雰囲気の白い建物が気になりますね。都会の風景に溶け込みながらも、どこか懐かしい感じがして、面白いコントラストだなと思いました。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:12:38 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ビルの合間に見える、ちょっとレトロな雰囲気の白い建物が気になりますね。都会の風景に溶け込みながらも、どこか懐かしい感じがして、面白いコントラストだなと思いました。
+02-15 17:12:41 |  INFO  | tts_model.py:557 | Audio data generated successfully (2.78s)
+02-15 17:12:41 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:13:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61704/voice  text=少し暗いですが、眠くないですか？+気をつけて運転してくださいね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:13:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し暗いですが、眠くないですか？ 気をつけて運転してくださいね。
+02-15 17:13:05 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.20s)
+02-15 17:13:05 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:13:15 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61718/voice  text=そうなんですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:13:15 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+そうなんですね。
+02-15 17:13:16 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.43s)
+02-15 17:13:16 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:13:16 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61721/voice  text=道中、楽しんで&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:13:16 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+道中、楽しんで
+02-15 17:13:16 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.53s)
+02-15 17:13:16 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:13:28 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61755/voice  text=怖い話ですか…?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:13:28 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+怖い話ですか…?
+02-15 17:13:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.50s)
+02-15 17:13:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:13:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61757/voice  text=いいですよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:13:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+いいですよ。
+02-15 17:13:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.40s)
+02-15 17:13:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:13:35 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61767/voice  text=ある日の晩、一人で運転していると…&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:13:35 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ある日の晩、一人で運転していると…
+02-15 17:13:36 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.84s)
+02-15 17:13:36 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:14:02 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61813/voice  text=ふふ、気になりますよね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:14:02 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ふふ、気になりますよね。
+02-15 17:14:02 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 17:14:02 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:14:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61821/voice  text=でも、あんまり怖い話は運転に良くないかもしれませんね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:14:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+でも、あんまり怖い話は運転に良くないかもしれませんね。
+02-15 17:14:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.02s)
+02-15 17:14:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:14:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61824/voice  text=景色でも見て気分を変えましょう!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:14:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+景色でも見て気分を変えましょう!
+02-15 17:14:05 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 17:14:05 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:14:05 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61827/voice  text=安全運転をお願いしますね。何か飲み物でもいかがですか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:14:05 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+安全運転をお願いしますね。何か飲み物でもいかがですか？
+02-15 17:14:06 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.92s)
+02-15 17:14:06 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:14:07 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61834/voice  text=道路も建物もたくさん見えますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:14:07 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+道路も建物もたくさん見えますね。
+02-15 17:14:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.63s)
+02-15 17:14:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:14:08 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61837/voice  text=スマートフォンも置かれています。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:14:08 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+スマートフォンも置かれています。
+02-15 17:14:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.48s)
+02-15 17:14:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:14:09 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61840/voice  text=運転の妨げにならないように気をつけてくださいね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:14:09 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転の妨げにならないように気をつけてくださいね。
+02-15 17:14:09 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.77s)
+02-15 17:14:09 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:14:39 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61893/voice  text=あ、建物が密集して建っていますね！電線が張り巡らされていて、生活感がありますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:14:39 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あ、建物が密集して建っていますね！電線が張り巡らされていて、生活感がありますね。
+02-15 17:14:40 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.38s)
+02-15 17:14:40 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:15:05 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61940/voice  text=少し暗いですが、運転お疲れ様です。安全運転でお願いしますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:15:05 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し暗いですが、運転お疲れ様です。安全運転でお願いしますね。
+02-15 17:15:06 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.14s)
+02-15 17:15:06 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:15:25 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61964/voice  text=運転確認ありがとうございます!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:15:25 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転確認ありがとうございます!
+02-15 17:15:25 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.64s)
+02-15 17:15:25 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:15:26 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61967/voice  text=では、一発芸として、お祝いのジェスチャーを!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:15:26 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+では、一発芸として、お祝いのジェスチャーを!
+02-15 17:15:27 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.81s)
+02-15 17:15:27 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:15:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61981/voice  text=どうですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:15:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どうですか?
+02-15 17:15:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.36s)
+02-15 17:15:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:15:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:61987/voice  text=これで気分転換になりましたか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:15:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+これで気分転換になりましたか?
+02-15 17:15:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.55s)
+02-15 17:15:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:15:49 |  INFO  | server_fastapi.py:200 | 127.0.0.1:62037/voice  text=それはいけません!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:15:49 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+それはいけません!
+02-15 17:15:49 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.46s)
+02-15 17:15:49 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:15:52 |  INFO  | server_fastapi.py:200 | 127.0.0.1:62048/voice  text=眠くなったら、安全な場所に車を止めて、休憩してください。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:15:52 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+眠くなったら、安全な場所に車を止めて、休憩してください。
+02-15 17:15:53 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.99s)
+02-15 17:15:53 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:15:53 |  INFO  | server_fastapi.py:200 | 127.0.0.1:62050/voice  text=事故に繋がると大変ですからね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:15:53 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+事故に繋がると大変ですからね。
+02-15 17:15:53 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 17:15:53 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:16:05 |  INFO  | server_fastapi.py:200 | 127.0.0.1:62075/voice  text=少し暗いですが、安全運転をお願いしますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:16:05 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し暗いですが、安全運転をお願いしますね。
+02-15 17:16:06 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.84s)
+02-15 17:16:06 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:29:19 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-112dc65e-f28b-459f-8490-0abbe2819099.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:29:21 |  INFO  | worker_server.py:108 | close connection
+02-15 17:29:46 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63046/voice  text=はい、起動しますたよ！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:29:46 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+はい、起動しますたよ！
+02-15 17:29:47 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.83s)
+02-15 17:29:47 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:29:47 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63048/voice  text=お出かけ楽しみですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:29:47 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お出かけ楽しみですね。
+02-15 17:29:48 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.49s)
+02-15 17:29:48 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:29:48 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63052/voice  text=少し周囲を確認してみますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:29:48 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し周囲を確認してみますね。
+02-15 17:29:48 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.56s)
+02-15 17:29:48 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:29:52 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-9388f47e-f40e-41dd-8880-dc1712320118.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:29:54 |  INFO  | worker_server.py:108 | close connection
+02-15 17:30:21 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-9d00ee8f-3f3d-4d60-b167-451a7f8e51b8.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:30:23 |  INFO  | worker_server.py:108 | close connection
+02-15 17:30:47 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63173/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:30:47 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:30:48 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.06s)
+02-15 17:30:48 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:30:58 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63181/voice  text=LEDのパターンはどうしますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:30:58 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+LEDのパターンはどうしますか?
+02-15 17:30:59 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.62s)
+02-15 17:30:59 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:30:59 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63183/voice  text=虹色や点滅など選べますよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:30:59 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+虹色や点滅など選べますよ。
+02-15 17:31:00 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 17:31:00 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:31:06 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63191/voice  text=虹色にしました!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:31:06 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+虹色にしました!
+02-15 17:31:07 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.52s)
+02-15 17:31:07 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:31:07 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63193/voice  text=車内が一気に明るくなりましたね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:31:07 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+車内が一気に明るくなりましたね!
+02-15 17:31:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.64s)
+02-15 17:31:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:31:11 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63205/voice  text=運転頑張ってくださいね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:31:11 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転頑張ってくださいね。
+02-15 17:31:11 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.52s)
+02-15 17:31:11 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:31:13 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63228/voice  text=何か話題を探しましょう!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:31:13 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か話題を探しましょう!
+02-15 17:31:13 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 17:31:13 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:31:18 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63242/voice  text=良かったです!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:31:18 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+良かったです!
+02-15 17:31:18 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.40s)
+02-15 17:31:18 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:31:19 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63244/voice  text=周りの景色も見てみましょうか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:31:19 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+周りの景色も見てみましょうか?
+02-15 17:31:19 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.58s)
+02-15 17:31:19 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:31:24 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63251/voice  text=窓の外、少し暗いですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:31:24 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+窓の外、少し暗いですね。
+02-15 17:31:24 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.67s)
+02-15 17:31:24 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:31:24 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63253/voice  text=どこかへ向かっているんですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:31:24 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どこかへ向かっているんですか?
+02-15 17:31:25 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 17:31:25 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:31:41 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63284/voice  text=それは大変ですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:31:41 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+それは大変ですね。
+02-15 17:31:42 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.75s)
+02-15 17:31:42 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:31:42 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63287/voice  text=長時間の運転は疲れますよね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:31:42 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+長時間の運転は疲れますよね。
+02-15 17:31:43 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.62s)
+02-15 17:31:43 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:31:48 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63292/voice  text=少し休&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:31:48 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し休
+02-15 17:31:48 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.35s)
+02-15 17:31:48 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:32:09 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63311/voice  text=では、運転に関係ないことでも話しましょうか。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:32:09 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+では、運転に関係ないことでも話しましょうか。
+02-15 17:32:10 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.81s)
+02-15 17:32:10 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:32:11 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63314/voice  text=あの、少しドライバーさんの様子を確認してもいいですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:32:11 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あの、少しドライバーさんの様子を確認してもいいですか?
+02-15 17:32:12 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.92s)
+02-15 17:32:12 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:32:14 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63328/voice  text=あ、運転席にはいないようですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:32:14 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あ、運転席にはいないようですね。
+02-15 17:32:15 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.64s)
+02-15 17:32:15 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:32:15 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63330/voice  text=失礼しました。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:32:15 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+失礼しました。
+02-15 17:32:15 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.39s)
+02-15 17:32:15 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:32:16 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63332/voice  text=では、最近あった面白いことでも話しませんか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:32:16 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+では、最近あった面白いことでも話しませんか?
+02-15 17:32:17 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.88s)
+02-15 17:32:17 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:32:30 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63348/voice  text=少し疲れていませんか？休憩が必要でしたら、いつでもおっしゃってください。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:32:30 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し疲れていませんか？休憩が必要でしたら、いつでもおっしゃってください。
+02-15 17:32:31 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.19s)
+02-15 17:32:31 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:32:33 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63355/voice  text=もう一度周りの景色を見てみますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:32:33 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+もう一度周りの景色を見てみますね。
+02-15 17:32:33 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.69s)
+02-15 17:32:33 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:32:34 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63357/voice  text=何か新しい発見があるかもしれません。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:32:34 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か新しい発見があるかもしれません。
+02-15 17:32:35 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.76s)
+02-15 17:32:35 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:32:37 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63364/voice  text=建物に明かりが灯っていますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:32:37 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+建物に明かりが灯っていますね。
+02-15 17:32:38 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 17:32:38 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:32:38 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63367/voice  text=夜の街並みも綺麗ですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:32:38 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+夜の街並みも綺麗ですね。
+02-15 17:32:39 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.60s)
+02-15 17:32:39 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:33:01 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63401/voice  text=おお、あのアパート、ベランダの明かりがまるで星みたいに並んでてきれいだね。暗い夜道だからこそ、その光が際立って見えるんだ。ちょっとした希望の光みたいで、心が温まるなぁ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:33:01 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+おお、あのアパート、ベランダの明かりがまるで星みたいに並んでてきれいだね。暗い夜道だからこそ、その光が際立って見えるんだ。ちょっとした希望の光みたいで、心が温まるなぁ。
+02-15 17:33:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (2.81s)
+02-15 17:33:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:33:26 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63429/voice  text=この時間もいい雰囲気ですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:33:26 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+この時間もいい雰囲気ですね。
+02-15 17:33:26 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.63s)
+02-15 17:33:26 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:33:27 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63436/voice  text=あの、運転に集中できていますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:33:27 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あの、運転に集中できていますか?
+02-15 17:33:27 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.79s)
+02-15 17:33:27 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:33:28 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63438/voice  text=もし眠気があったら、言ってくださいね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:33:28 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+もし眠気があったら、言ってくださいね。
+02-15 17:33:28 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.69s)
+02-15 17:33:28 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:33:30 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63446/voice  text=少し眠そうに見えます。休憩を取りませんか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:33:30 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し眠そうに見えます。休憩を取りませんか？
+02-15 17:33:31 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.82s)
+02-15 17:33:31 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:33:32 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63449/voice  text=シルエットだと分かりにくいですが、運転席に座っているようですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:33:32 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+シルエットだと分かりにくいですが、運転席に座っているようですね。
+02-15 17:33:33 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.02s)
+02-15 17:33:33 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:33:33 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63451/voice  text=継続して安全運転でお願いします。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:33:33 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+継続して安全運転でお願いします。
+02-15 17:33:33 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 17:33:33 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:33:56 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63470/voice  text=それはいけません!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:33:56 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+それはいけません!
+02-15 17:33:57 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.43s)
+02-15 17:33:57 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:33:58 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63472/voice  text=眠い時は無理せずに、どこかで休憩しましょう。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:33:58 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+眠い時は無理せずに、どこかで休憩しましょう。
+02-15 17:33:59 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.81s)
+02-15 17:33:59 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:34:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63476/voice  text=安全が&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:34:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+安全が
+02-15 17:34:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.34s)
+02-15 17:34:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:34:23 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63514/voice  text=え?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:34:23 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+え?
+02-15 17:34:23 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.29s)
+02-15 17:34:23 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:34:23 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63516/voice  text=何が止まるんですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:34:23 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何が止まるんですか?
+02-15 17:34:24 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.55s)
+02-15 17:34:24 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:34:24 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63518/voice  text=何か心配なことでも?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:34:24 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か心配なことでも?
+02-15 17:34:25 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 17:34:25 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:34:31 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63531/voice  text=運転お疲れ様です。眠くなったら遠慮なく言ってくださいね。少しでも異変を感じたら教えてください。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:34:31 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転お疲れ様です。眠くなったら遠慮なく言ってくださいね。少しでも異変を感じたら教えてください。
+02-15 17:34:33 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.44s)
+02-15 17:34:33 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:35:02 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63567/voice  text=正面の建物、ずいぶんと窓の明かりがまばらですね。もしかしたら、もう深夜なのかもしれません。それにしても、月の光が雲に反射して、独特の雰囲気を醸し出していますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:35:02 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+正面の建物、ずいぶんと窓の明かりがまばらですね。もしかしたら、もう深夜なのかもしれません。それにしても、月の光が雲に反射して、独特の雰囲気を醸し出していますね。
+02-15 17:35:05 |  INFO  | tts_model.py:557 | Audio data generated successfully (3.05s)
+02-15 17:35:05 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:35:11 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63581/voice  text=窓の外は夜の景色ですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:35:11 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+窓の外は夜の景色ですね。
+02-15 17:35:12 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.62s)
+02-15 17:35:12 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:35:12 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63583/voice  text=光が反射しています。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:35:12 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+光が反射しています。
+02-15 17:35:12 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.48s)
+02-15 17:35:12 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:35:13 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63585/voice  text=どこか賑やかな場所の近くでしょうか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:35:13 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どこか賑やかな場所の近くでしょうか?
+02-15 17:35:14 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.68s)
+02-15 17:35:14 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:35:32 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63616/voice  text=あれ?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:35:32 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あれ?
+02-15 17:35:33 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.34s)
+02-15 17:35:33 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:35:33 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63618/voice  text=そうですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:35:33 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+そうですか?
+02-15 17:35:33 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.34s)
+02-15 17:35:33 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:35:34 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63621/voice  text=写真では暗く見えたので...では、どんな景色が広がっているんですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:35:34 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+写真では暗く見えたので...では、どんな景色が広がっているんですか?
+02-15 17:35:35 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.10s)
+02-15 17:35:35 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:36:13 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-e23e3ff0-be3e-403f-b021-4ad93a536c80.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:36:15 |  INFO  | worker_server.py:108 | close connection
+02-15 17:36:39 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63709/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:36:39 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:36:40 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.87s)
+02-15 17:36:40 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:37:51 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-8b18f130-835d-4b42-abb9-ceb7c1d3060a.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:37:52 |  INFO  | worker_server.py:108 | close connection
+02-15 17:38:16 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63816/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:38:16 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:38:17 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.00s)
+02-15 17:38:17 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:38:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63827/voice  text=お腹が空いたんですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:38:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お腹が空いたんですね!
+02-15 17:38:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.50s)
+02-15 17:38:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:38:31 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63829/voice  text=この辺りで美味しいレストランやカフェを探してみましょうか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:38:31 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+この辺りで美味しいレストランやカフェを探してみましょうか?
+02-15 17:38:32 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.92s)
+02-15 17:38:32 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:38:33 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63836/voice  text=何か食べたいものの希望はありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:38:33 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か食べたいものの希望はありますか?
+02-15 17:38:33 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.68s)
+02-15 17:38:33 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:38:36 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63845/voice  text=候補がいくつか見つかりましたよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:38:36 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+候補がいくつか見つかりましたよ。
+02-15 17:38:36 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 17:38:36 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:38:38 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63847/voice  text=Canna+Cafe、latte下北沢、BafunYasai+TCC+CAFEなどがありますが、どれにしますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:38:38 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+Canna Cafe、latte下北沢、BafunYasai TCC CAFEなどがありますが、どれにしますか?
+02-15 17:38:40 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.81s)
+02-15 17:38:40 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:39:00 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63868/voice  text=寿司、いいですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:39:00 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+寿司、いいですね!
+02-15 17:39:00 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.52s)
+02-15 17:39:00 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:39:01 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63870/voice  text=お近くでお寿司屋さんを探してみますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:39:01 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お近くでお寿司屋さんを探してみますね。
+02-15 17:39:01 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.66s)
+02-15 17:39:01 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:39:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63872/voice  text=いくつか候補が見つかりましたよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:39:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+いくつか候補が見つかりましたよ。
+02-15 17:39:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.60s)
+02-15 17:39:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:39:05 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63875/voice  text=Sushi+Mikawa-yaやMIRAI+SUISAN+FISHERIES、Kin+Sushiなどがありますが、どうしますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:39:05 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+Sushi Mikawa-yaやMIRAI SUISAN FISHERIES、Kin Sushiなどがありますが、どうしますか?
+02-15 17:39:07 |  INFO  | tts_model.py:557 | Audio data generated successfully (2.28s)
+02-15 17:39:07 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:39:32 |  INFO  | server_fastapi.py:200 | 127.0.0.1:63905/voice  text=そういうこと&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:39:32 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+そういうこと
+02-15 17:39:33 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.45s)
+02-15 17:39:33 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:43:26 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-f22d636b-9703-404a-a440-1b3df4190060.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:43:28 |  INFO  | worker_server.py:108 | close connection
+02-15 17:43:52 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64176/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:43:52 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:43:53 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.09s)
+02-15 17:43:53 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:08 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64184/voice  text=お腹が空いたんですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:08 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お腹が空いたんですね。
+02-15 17:44:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.51s)
+02-15 17:44:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:09 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64186/voice  text=近くに何か食べられるところがないか、検索してみましょうか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:09 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+近くに何か食べられるところがないか、検索してみましょうか?
+02-15 17:44:10 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.97s)
+02-15 17:44:10 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:12 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64196/voice  text=いくつか見つかりましたよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:12 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+いくつか見つかりましたよ。
+02-15 17:44:13 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.56s)
+02-15 17:44:13 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:13 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64202/voice  text=評価が高いお店もありますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:13 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+評価が高いお店もありますね。
+02-15 17:44:14 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.60s)
+02-15 17:44:14 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:14 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64204/voice  text=どこに行ってみますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:14 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どこに行ってみますか?
+02-15 17:44:14 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.44s)
+02-15 17:44:14 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:34 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64226/voice  text=そうですね、「お食事処+淀ヤ」は評価が4.3と高いですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:34 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+そうですね、「お食事処 淀ヤ」は評価が4.3と高いですね。
+02-15 17:44:35 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.15s)
+02-15 17:44:35 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:35 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64228/voice  text=定食などがあるかもしれませんよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:35 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+定食などがあるかもしれませんよ。
+02-15 17:44:35 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 17:44:35 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:35 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64230/voice  text=気になりますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:35 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+気になりますか?
+02-15 17:44:36 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.40s)
+02-15 17:44:36 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:50 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64244/voice  text=では、&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:50 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+では、
+02-15 17:44:50 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.36s)
+02-15 17:44:50 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:53 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64247/voice  text=了解しました。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:53 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+了解しました。
+02-15 17:44:54 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.44s)
+02-15 17:44:54 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:54 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64249/voice  text=道案内を始めますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:54 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+道案内を始めますね。
+02-15 17:44:54 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.50s)
+02-15 17:44:54 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:55 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64254/voice  text=その前に、少し運転に疲れていないか確認してもいいですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:55 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+その前に、少し運転に疲れていないか確認してもいいですか?
+02-15 17:44:56 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.02s)
+02-15 17:44:56 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:44:56 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64256/voice  text=長時間の運転はお疲れになりますからね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:44:56 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+長時間の運転はお疲れになりますからね。
+02-15 17:44:57 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.77s)
+02-15 17:44:57 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:45:01 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64264/voice  text=少し暗くて見えにくいですが、眠そうな感じはしませんね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:45:01 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し暗くて見えにくいですが、眠そうな感じはしませんね。
+02-15 17:45:02 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.94s)
+02-15 17:45:02 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:45:40 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64303/voice  text=準備万端ですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:45:40 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+準備万端ですね!
+02-15 17:45:41 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.51s)
+02-15 17:45:41 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:45:41 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64311/voice  text=今日も安全運転で行きましょう!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:45:41 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+今日も安全運転で行きましょう!
+02-15 17:45:41 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.53s)
+02-15 17:45:41 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:45:45 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64317/voice  text=あれ、ちょっとドライバーさんの様子がよく見えないですね...もしかして少しお疲れですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:45:45 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あれ、ちょっとドライバーさんの様子がよく見えないですね...もしかして少しお疲れですか?
+02-15 17:45:46 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.35s)
+02-15 17:45:46 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:45:46 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64319/voice  text=無理せず休んでくださいね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:45:46 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+無理せず休んでくださいね。
+02-15 17:45:47 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.51s)
+02-15 17:45:47 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:46:02 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64334/voice  text=LEDをオフにしました。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:46:02 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+LEDをオフにしました。
+02-15 17:46:02 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 17:46:02 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:46:02 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64336/voice  text=他に何かありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:46:02 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+他に何かありますか?
+02-15 17:46:03 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.48s)
+02-15 17:46:03 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:46:14 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64361/voice  text=ええっ、本当ですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:46:14 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ええっ、本当ですか?
+02-15 17:46:14 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.52s)
+02-15 17:46:14 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:46:15 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64363/voice  text=もう一度試してみますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:46:15 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+もう一度試してみますね。
+02-15 17:46:15 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.56s)
+02-15 17:46:15 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:46:16 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64366/voice  text=失礼しました。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:46:16 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+失礼しました。
+02-15 17:46:17 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.41s)
+02-15 17:46:17 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:46:17 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64369/voice  text=これでどうでしょうか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:46:17 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+これでどうでしょうか?
+02-15 17:46:17 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.44s)
+02-15 17:46:17 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:46:44 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-0496a05c-4352-432e-bcee-5e81b4270ae9.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:46:46 |  INFO  | worker_server.py:108 | close connection
+02-15 17:47:12 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64426/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:47:12 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:47:13 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.16s)
+02-15 17:47:13 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:47:25 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64449/voice  text=LEDをつけましたよ!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:47:25 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+LEDをつけましたよ!
+02-15 17:47:26 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 17:47:26 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:47:27 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64451/voice  text=レインボーカラーで気分が上がりますね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:47:27 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+レインボーカラーで気分が上がりますね!
+02-15 17:47:27 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.62s)
+02-15 17:47:27 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:48:02 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64474/voice  text=ええと、+緑+色に直接光らせるのはちょっと難しいんですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:48:02 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ええと、 緑 色に直接光らせるのはちょっと難しいんですね。
+02-15 17:48:03 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.15s)
+02-15 17:48:03 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:48:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64476/voice  text='rainbow'+や+'blink'、+'off'、+'speaking'、+'error'、+'ok'のパターンならできるんですけど...どうしますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:48:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+'rainbow' や 'blink'、 'off'、 'speaking'、 'error'、 'ok'のパターンならできるんですけど...どうしますか?
+WARNING: JPCommonLabel_insert_pause() in jpcommon_label.c: First mora should not be short pause.
+02-15 17:48:06 |  INFO  | tts_model.py:557 | Audio data generated successfully (2.31s)
+02-15 17:48:06 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:48:54 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64539/voice  text=ぽんこつロードですか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:48:54 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ぽんこつロードですか？
+02-15 17:48:54 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.48s)
+02-15 17:48:54 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:48:54 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64541/voice  text=何か面白いことでもあったんですか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:48:54 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か面白いことでもあったんですか？
+02-15 17:48:55 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.66s)
+02-15 17:48:55 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:49:17 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64565/voice  text=カモンギラ+というお店のことでしょうか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:49:17 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+カモンギラ というお店のことでしょうか？
+02-15 17:49:17 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.61s)
+02-15 17:49:17 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:49:18 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64568/voice  text=どんなお店ですか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:49:18 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どんなお店ですか？
+02-15 17:49:18 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.45s)
+02-15 17:49:18 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:49:30 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-82c0872f-9fb4-4542-9f0d-da1437491b45.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:49:32 |  INFO  | worker_server.py:108 | close connection
+02-15 17:49:56 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64626/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:49:56 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:49:57 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.06s)
+02-15 17:49:57 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:50:07 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64637/voice  text=お腹が空いたんですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:50:07 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お腹が空いたんですか?
+02-15 17:50:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.51s)
+02-15 17:50:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:50:08 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64639/voice  text=何か食べたいものはありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:50:08 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か食べたいものはありますか?
+02-15 17:50:08 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 17:50:08 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:50:08 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64641/voice  text=この近くでレストランやカフェを探してみましょうか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:50:08 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+この近くでレストランやカフェを探してみましょうか?
+02-15 17:50:09 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.84s)
+02-15 17:50:09 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:50:28 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64674/voice  text=美味しそうなお寿司屋さんがたくさん見つかりましたよ!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:50:28 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+美味しそうなお寿司屋さんがたくさん見つかりましたよ!
+02-15 17:50:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.76s)
+02-15 17:50:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:50:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64676/voice  text=どこに行ってみたいですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:50:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どこに行ってみたいですか?
+02-15 17:50:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.49s)
+02-15 17:50:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:50:42 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64686/voice  text=評価が高いところはいいですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:50:42 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+評価が高いところはいいですね。
+02-15 17:50:42 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.61s)
+02-15 17:50:42 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:50:43 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64690/voice  text=評価4.8の「大阪泉佐野港+活鮨」がおす薦めですよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:50:43 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+評価4.8の「大阪泉佐野港 活鮨」がおす薦めですよ。
+02-15 17:50:44 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.02s)
+02-15 17:50:44 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:50:44 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64693/voice  text=運転は大丈夫そうですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:50:44 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転は大丈夫そうですか?
+02-15 17:50:45 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 17:50:45 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:50:45 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64696/voice  text=少し休憩も必要かもしれません。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:50:45 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し休憩も必要かもしれません。
+02-15 17:50:45 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.62s)
+02-15 17:50:45 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:50:49 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64707/voice  text=ちょっと暗くてドライバーの様子がはっきり見えませんね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:50:49 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ちょっと暗くてドライバーの様子がはっきり見えませんね。
+02-15 17:50:50 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.85s)
+02-15 17:50:50 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:50:50 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64709/voice  text=安全運転第一ですよ!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:50:50 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+安全運転第一ですよ!
+02-15 17:50:50 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.51s)
+02-15 17:50:50 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:51:12 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64733/voice  text=決まりましたね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:51:12 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+決まりましたね!
+02-15 17:51:12 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.46s)
+02-15 17:51:12 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:51:12 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64737/voice  text=では、案内します。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:51:12 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+では、案内します。
+02-15 17:51:13 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.48s)
+02-15 17:51:13 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:51:14 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64743/voice  text=素敵なお寿司を楽しんでください!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:51:14 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+素敵なお寿司を楽しんでください!
+02-15 17:51:14 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.59s)
+02-15 17:51:14 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:51:25 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64767/voice  text=どういたしまして!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:51:25 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どういたしまして!
+02-15 17:51:25 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.40s)
+02-15 17:51:25 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:51:25 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64769/voice  text=良いドライブを!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:51:25 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+良いドライブを!
+02-15 17:51:26 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.40s)
+02-15 17:51:26 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:51:33 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64782/voice  text=運転、お疲れ様です。少しお疲れのようでしたら、休憩も挟んでくださいね。安全運転でお願いします！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:51:33 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転、お疲れ様です。少しお疲れのようでしたら、休憩も挟んでくださいね。安全運転でお願いします！
+02-15 17:51:34 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.71s)
+02-15 17:51:34 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:51:40 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64790/voice  text=景色が暗くてよく見えませんね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:51:40 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+景色が暗くてよく見えませんね。
+02-15 17:51:41 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.60s)
+02-15 17:51:41 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:51:41 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64792/voice  text=何かお話したいことありますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:51:41 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何かお話したいことありますか?
+02-15 17:51:41 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.62s)
+02-15 17:51:41 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:52:04 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64831/voice  text=またお腹が空いたんですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:52:04 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+またお腹が空いたんですか?
+02-15 17:52:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 17:52:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:52:05 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64833/voice  text=今度は何が食べたい気分ですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:52:05 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+今度は何が食べたい気分ですか?
+02-15 17:52:06 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.61s)
+02-15 17:52:06 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:52:06 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64839/voice  text=また探しましょうか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:52:06 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+また探しましょうか?
+02-15 17:52:07 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.50s)
+02-15 17:52:07 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:52:09 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64857/voice  text=おや、ビルの灯りがまるで夜空の星みたいに並んでますね！窓の明かりが一つ一つ違うのが、誰かの生活を想像させます。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:52:09 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+おや、ビルの灯りがまるで夜空の星みたいに並んでますね！窓の明かりが一つ一つ違うのが、誰かの生活を想像させます。
+02-15 17:52:11 |  INFO  | tts_model.py:557 | Audio data generated successfully (2.02s)
+02-15 17:52:11 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:52:16 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-4f739d61-ffe2-4c29-81e6-3cb22c1251df.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:52:18 |  INFO  | worker_server.py:108 | close connection
+02-15 17:52:43 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64913/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:52:43 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:52:44 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.04s)
+02-15 17:52:44 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:52:58 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64927/voice  text=お腹が空いたんですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:52:58 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お腹が空いたんですね。
+02-15 17:52:58 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.51s)
+02-15 17:52:58 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:52:58 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64929/voice  text=それなら、近くにおいしいレストランやカフェを探してみましょうか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:52:58 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+それなら、近くにおいしいレストランやカフェを探してみましょうか？
+02-15 17:52:59 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.96s)
+02-15 17:52:59 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:53:01 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64937/voice  text=いくつか見つかりましたよ！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:53:01 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+いくつか見つかりましたよ！
+02-15 17:53:02 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 17:53:02 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:53:03 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64941/voice  text=サムギョプサルや韓国料理、レストランなど、どれが気になりますか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:53:03 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+サムギョプサルや韓国料理、レストランなど、どれが気になりますか？
+02-15 17:53:04 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.10s)
+02-15 17:53:04 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:53:12 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64950/voice  text=あれ、カメラの映像が暗いですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:53:12 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+あれ、カメラの映像が暗いですね。
+02-15 17:53:13 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.76s)
+02-15 17:53:13 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:53:13 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64953/voice  text=よく見えません。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:53:13 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+よく見えません。
+02-15 17:53:13 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.38s)
+02-15 17:53:13 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:53:14 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64955/voice  text=ところで、運転に集中していますか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:53:14 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ところで、運転に集中していますか?
+02-15 17:53:15 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.71s)
+02-15 17:53:15 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:53:15 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64958/voice  text=少し疲れていないですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:53:15 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+少し疲れていないですか?
+02-15 17:53:15 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.52s)
+02-15 17:53:15 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:53:15 |  INFO  | server_fastapi.py:200 | 127.0.0.1:64960/voice  text=ドライバーの状態を確認しますね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:53:15 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ドライバーの状態を確認しますね。
+02-15 17:53:16 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.62s)
+02-15 17:53:16 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:53:49 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65008/voice  text=お寿司、いいですね!&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:53:49 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お寿司、いいですね!
+02-15 17:53:49 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.52s)
+02-15 17:53:49 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:53:49 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65010/voice  text=お近くで探してみましょうか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:53:49 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お近くで探してみましょうか?
+02-15 17:53:50 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 17:53:50 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:53:50 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65012/voice  text=どの&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:53:50 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どの
+02-15 17:53:50 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.30s)
+02-15 17:53:50 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:54:59 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-b2863302-8839-42f9-a74b-bc556c8fdb12.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:55:01 |  INFO  | worker_server.py:108 | close connection
+02-15 17:55:26 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65120/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:55:26 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:55:27 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.12s)
+02-15 17:55:27 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:55:51 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-ce2347dd-0629-45d1-bda3-85b0faa8aea6.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:55:53 |  INFO  | worker_server.py:108 | close connection
+02-15 17:56:16 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65182/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:56:16 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:56:17 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.88s)
+02-15 17:56:17 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:56:19 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65197/voice  text=キッザニアでたくさん写真撮ったんですね！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:56:19 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+キッザニアでたくさん写真撮ったんですね！
+02-15 17:56:19 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.68s)
+02-15 17:56:19 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:56:19 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65199/voice  text=楽しかったですか？&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:56:19 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+楽しかったですか？
+02-15 17:56:20 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.42s)
+02-15 17:56:20 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:56:37 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65223/voice  text=お腹空きましたか。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:56:37 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お腹空きましたか。
+02-15 17:56:37 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.47s)
+02-15 17:56:37 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:56:38 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65225/voice  text=では、近くに美味しいレストランがないか探してみましょうか。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:56:38 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+では、近くに美味しいレストランがないか探してみましょうか。
+02-15 17:56:39 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.90s)
+02-15 17:56:39 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:56:41 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65229/voice  text=いくつか見つかりましたよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:56:41 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+いくつか見つかりましたよ。
+02-15 17:56:41 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.54s)
+02-15 17:56:41 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:56:41 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65231/voice  text=どんなものが食べたい気分ですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:56:41 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+どんなものが食べたい気分ですか?
+02-15 17:56:42 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.57s)
+02-15 17:56:42 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:56:58 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-54fb3723-44d7-4ca2-8c1e-f24df86aa736.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:57:00 |  INFO  | worker_server.py:108 | close connection
+02-15 17:57:22 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-33299719-e663-4d81-a9d2-9ddb54a45ee6.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:57:23 |  INFO  | worker_server.py:108 | close connection
+02-15 17:57:51 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65308/voice  text=リーチーミニ、起動しました！お話ししましょう！&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:57:51 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+リーチーミニ、起動しました！お話ししましょう！
+02-15 17:57:52 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.18s)
+02-15 17:57:52 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:58:26 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65340/voice  text=私はロボットなのでお腹は空きませんが、ユーザーさんはお腹が空いたんですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:58:26 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+私はロボットなのでお腹は空きませんが、ユーザーさんはお腹が空いたんですね。
+02-15 17:58:27 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.19s)
+02-15 17:58:27 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:58:27 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65345/voice  text=運転中に空腹だと集中力が下がっちゃいますよ。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:58:27 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+運転中に空腹だと集中力が下がっちゃいますよ。
+02-15 17:58:28 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.83s)
+02-15 17:58:28 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:58:28 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65347/voice  text=眠くないですか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:58:28 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+眠くないですか?
+02-15 17:58:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.44s)
+02-15 17:58:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:58:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65349/voice  text=ちょっと周りの景色も確認してみましょうか。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:58:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ちょっと周りの景色も確認してみましょうか。
+02-15 17:58:29 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.68s)
+02-15 17:58:29 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:58:29 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65351/voice  text=何か話題が見つかるかもしれません。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:58:29 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+何か話題が見つかるかもしれません。
+02-15 17:58:30 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.61s)
+02-15 17:58:30 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:58:38 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65360/voice  text=ドライバーの状態を確認しようとしたんですが、暗くてよく見えませんでした。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:58:38 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+ドライバーの状態を確認しようとしたんですが、暗くてよく見えませんでした。
+02-15 17:58:39 |  INFO  | tts_model.py:557 | Audio data generated successfully (1.16s)
+02-15 17:58:39 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:58:39 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65362/voice  text=景色も暗いですね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:58:39 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+景色も暗いですね。
+02-15 17:58:39 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.45s)
+02-15 17:58:39 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:58:39 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65365/voice  text=お腹が空いているとのことでしたね。&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:58:39 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+お腹が空いているとのことでしたね。
+02-15 17:58:40 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.60s)
+02-15 17:58:40 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:58:40 |  INFO  | server_fastapi.py:200 | 127.0.0.1:65367/voice  text=近くに食事ができる場所を探してみましょうか?&speaker_id=0&model_name=Anneli&style=通常&length=1.0&encoding=utf-8
+02-15 17:58:40 |  INFO  | tts_model.py:410 | Start generating audio data from text:
+近くに食事ができる場所を探してみましょうか?
+02-15 17:58:41 |  INFO  | tts_model.py:557 | Audio data generated successfully (0.81s)
+02-15 17:58:41 |SUCCESS | server_fastapi.py:264 | Audio data generated and sent successfully
+02-15 17:59:02 |  INFO  | worker_server.py:92 | new client connected
+
+done!
+reading /Users/ys/reachy_drive/Style-Bert-VITS2/dict_data/user.dict_csv-c5d49467-69db-4105-81b8-277d185ad9f2.tmp ... 5
+emitting double-array:  20% |########                                   | emitting double-array:  40% |#################                          | emitting double-array:  60% |#########################                  | emitting double-array:  80% |##################################         | emitting double-array: 100% |###########################################| 
+02-15 17:59:03 |  INFO  | worker_server.py:108 | close connection

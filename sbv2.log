@@ -1,0 +1,20 @@
+🚀 Starting Style-Bert-VITS2 Server on port 10000...
+/Users/ys/reachy_drive/Style-Bert-VITS2/sbv2_venv/lib/python3.12/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/Users/ys/reachy_drive/Style-Bert-VITS2/sbv2_venv/lib/python3.12/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/Users/ys/reachy_drive/Style-Bert-VITS2/sbv2_venv/lib/python3.12/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+02-15 17:59:02 | DEBUG  | __init__.py:130 | pyopenjtalk worker server started
+Some weights of DebertaV2ForMaskedLM were not initialized from the model checkpoint at /Users/ys/reachy_drive/Style-Bert-VITS2/bert/deberta-v2-large-japanese-char-wwm and are newly initialized: ['cls.predictions.decoder.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+02-15 17:59:03 |  INFO  | bert_models.py:112 | Loaded the JP BERT model from /Users/ys/reachy_drive/Style-Bert-VITS2/bert/deberta-v2-large-japanese-char-wwm (1.80s)
+02-15 17:59:03 |  INFO  | bert_models.py:178 | Loaded the JP BERT tokenizer from /Users/ys/reachy_drive/Style-Bert-VITS2/bert/deberta-v2-large-japanese-char-wwm
+02-15 17:59:03 |  INFO  | server_fastapi.py:120 | Loading models...
+02-15 17:59:03 |  INFO  | server_fastapi.py:127 | The maximum length of the text is 100. If you want to change it, modify config.yml. Set limit to -1 to remove the limit.
+02-15 17:59:03 |WARNING | server_fastapi.py:133 | CORS allow_origins=['*']. If you don't want, modify config.yml
+02-15 17:59:03 |  INFO  | server_fastapi.py:346 | server listen: http://127.0.0.1:10000
+02-15 17:59:03 |  INFO  | server_fastapi.py:347 | API docs: http://127.0.0.1:10000/docs
+02-15 17:59:03 |  INFO  | server_fastapi.py:348 | Input text length limit: 100. You can change it in server.limit in config.yml
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 10000): address already in use
+02-15 17:59:03 | DEBUG  | __init__.py:147 | pyopenjtalk worker server terminated
