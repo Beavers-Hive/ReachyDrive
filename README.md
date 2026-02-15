@@ -1,4 +1,4 @@
-# Reachy Drive プロジェクト
+# 相棒ロボ「Reachy」と楽しくドライブ！
 Reachy Miniを助手席に座らせて、相棒として運転の体験をアップデートするプロジェクトです！
 
 第4回 AI Agent Hackathon with Google Cloudへの応募作品になります。 
